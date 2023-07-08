@@ -1,0 +1,48 @@
+// Import fonts ===============================================================
+//@import url(https://fonts.googleapis.com/css?family=Comfortaa:300,regular,500,600,700);
+// (...< &display=swap&subset=cyrillic-ext >)
+
+// Import *.scss =========================================================
+@import "_reset";
+@import "_ibg";
+
+// Set variables ==============================================================
+$titleFont: Montserrat;
+$textFont: "Open Sans";
+$backgroundColor-1: #ffffff;
+$backgroundColor-2: #f4f4f8;
+$backgroundColor-2: #ebe7f3;
+$color: #1b1b1b;
+$colorHighlighted: #4d1299;
+
+// Base styles ================================================================
+body {
+	color: #f5f5f5;
+	background-color: #262c37;
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: clip;
+}
+
+[class*="__container"] {
+	max-width: 74 375rem;
+	margin: 0 auto;
+	padding-left: 0.9375em;
+	padding-right: 0.9375em;
+}
+
+//==================== Header ====================
+
+//==================== Main ======================
+
+// ===========================
+
+// ===========================
+
+// ===========================
+
+// ===========================
+
+//====================	 Footer ====================
