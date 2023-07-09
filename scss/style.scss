@@ -9,16 +9,17 @@
 // Set variables ==============================================================
 $titleFont: Montserrat;
 $textFont: "Open Sans";
-$backgroundColor-1: #ffffff;
-$backgroundColor-2: #f4f4f8;
-$backgroundColor-2: #ebe7f3;
-$color: #1b1b1b;
-$colorHighlighted: #4d1299;
+$backgroundColorWhite: #ffffff;
+$backgroundColorLightBlue: #f4f4f8;
+$backgroundColorBlue: #ebe7f3;
+$colorWhite: #ffffff;
+$colorBlack: #1b1b1b;
+$colorViolet: #4d1299;
 
 // Base styles ================================================================
 body {
-	color: #f5f5f5;
-	background-color: #262c37;
+	color: $colorBlack;
+	font-family: $textFont, Arial, Helvetica, sans-serif;
 }
 
 .wrapper {
@@ -27,13 +28,151 @@ body {
 }
 
 [class*="__container"] {
-	max-width: 74 375rem;
+	max-width: 74.375rem;
 	margin: 0 auto;
 	padding-left: 0.9375em;
 	padding-right: 0.9375em;
 }
 
+.title {
+	font-family: $titleFont, Arial, Helvetica, sans-serif;
+}
+// ===========================
+.header {
+	background-color: $backgroundColorLightBlue;
+	box-shadow: 0px 15px 20px 0px rgba(33, 33, 51, 0.03);
+	&__navigation {
+		width: 100%;
+		height: 6.75rem;
+		display: flex;
+		align-items: center;
+		padding: 1.25rem 0;
+	}
+}
+
 //==================== Header ====================
+.navigation-header {
+	&__logo {
+		flex-shrink: 0;
+		width: 3.32919rem;
+		height: 4.25rem;
+		margin-right: 2.92rem;
+		> img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	&__switch {
+		display: flex;
+		padding: 0.3125rem;
+		justify-content: center;
+		align-items: center;
+		column-gap: 0.1875rem;
+		border-radius: 3.125rem;
+		border: 2px solid #4d1299;
+		margin-right: 3.87rem;
+	}
+
+	&__links {
+		display: flex;
+		column-gap: 3.12rem;
+		margin-right: 3.88rem;
+	}
+
+	&__social {
+		display: flex;
+		column-gap: 0.94rem;
+		margin-right: 2.5rem;
+	}
+
+	&__phone {
+		display: flex;
+		padding: 1.125rem 1.625rem;
+		justify-content: center;
+		align-items: center;
+		border-radius: 3.125rem;
+		border: 2px solid #4d1299;
+		> a {
+			color: $colorViolet;
+			font-size: 1.125rem;
+			font-style: normal;
+			font-weight: 600;
+			line-height: normal;
+		}
+	}
+
+	&__menu-button {
+	}
+}
+.switch-pages {
+	> a {
+		display: flex;
+		padding: 0.3125rem 0.875rem;
+		justify-content: center;
+		align-items: center;
+		color: inherit;
+		font-size: 0.875rem;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 1.25rem;
+	}
+	&__home {
+		&.active {
+			color: $colorWhite;
+			border-radius: 1.5625rem;
+			background: #4d1299;
+		}
+	}
+
+	&__office {
+		&.active {
+			color: $colorWhite;
+			border-radius: 1.5625rem;
+			background: #4d1299;
+		}
+	}
+}
+.text-links {
+	font-size: 1.125rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	> a {
+		color: inherit;
+	}
+	&__after-repair {
+	}
+
+	&__cost-estimate {
+	}
+}
+.social-links {
+	> a {
+		width: 2.5rem;
+		height: 2.5rem;
+		flex-shrink: 0;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+	&__instagram {
+	}
+
+	&__facebook {
+	}
+
+	&__messenger {
+	}
+}
+
+.button-menu {
+	&__line {
+	}
+}
 
 //==================== Main ======================
 
