@@ -31,9 +31,25 @@ body {
 	margin: 0 auto;
 	padding: 0 0.9375rem;
 }
-
+// ===========================
 .title {
 	font-family: $titleFont; //, Arial, Helvetica, sans-serif;
+}
+// ===========================
+.phone {
+	display: flex;
+	padding: 1.125rem 1.625rem;
+	justify-content: center;
+	align-items: center;
+	border-radius: 3.125rem;
+
+	> a {
+		color: $colorViolet;
+		font-size: 1.125rem;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 1.563rem;
+	}
 }
 // ===========================
 .header {
@@ -59,10 +75,11 @@ body {
 		padding-left: 5rem;
 		display: flex;
 		flex-direction: column;
-		// display: none;
+		transition: all 0.3s ease-in-out;
+		opacity: 0;
 
-		a {
-			color: $colorWhite;
+		&.active {
+			opacity: 1;
 		}
 	}
 }
@@ -96,20 +113,7 @@ body {
 	}
 
 	&__phone {
-		display: flex;
-		padding: 1.125rem 1.625rem;
-		justify-content: center;
-		align-items: center;
-		border-radius: 3.125rem;
 		border: 2px solid #4d1299;
-
-		> a {
-			color: $colorViolet;
-			font-size: 1.125rem;
-			font-style: normal;
-			font-weight: 600;
-			line-height: normal;
-		}
 	}
 
 	&__menu-button {
@@ -184,6 +188,9 @@ body {
 		&:not(:last-child) {
 			margin-bottom: 1.5rem;
 		}
+		> a {
+			color: $colorWhite;
+		}
 	}
 
 	&__references {
@@ -204,9 +211,7 @@ body {
 	}
 
 	&__phone {
-		display: inline-flex;
-		justify-content: center;
-		align-items: center;
+		background-color: $colorWhite;
 	}
 }
 
