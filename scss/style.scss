@@ -9,9 +9,8 @@
 // Set variables ==============================================================
 $titleFont: Montserrat;
 $textFont: "Open Sans";
-$backgroundColorWhite: #ffffff;
-$backgroundColorLightBlue: #f4f4f8;
-$backgroundColorBlue: #ebe7f3;
+$colorLightBlue: #f4f4f8;
+$colorBlue: #ebe7f3;
 $colorWhite: #ffffff;
 $colorBlack: #1b1b1b;
 $colorViolet: #4d1299;
@@ -19,7 +18,7 @@ $colorViolet: #4d1299;
 // Base styles ================================================================
 body {
 	color: $colorBlack;
-	font-family: $textFont, Arial, Helvetica, sans-serif;
+	font-family: $textFont; //, Arial, Helvetica, sans-serif;
 }
 
 .wrapper {
@@ -28,23 +27,43 @@ body {
 }
 
 [class*="__container"] {
-	max-width: 1160px;
+	max-width: 74.375rem;
 	margin: 0 auto;
-	padding: 0 15px;
+	padding: 0 0.9375rem;
 }
 
 .title {
-	font-family: $titleFont, Arial, Helvetica, sans-serif;
+	font-family: $titleFont; //, Arial, Helvetica, sans-serif;
 }
 // ===========================
 .header {
-	background-color: $backgroundColorLightBlue;
-	box-shadow: 0px 15px 20px 0px rgba(33, 33, 51, 0.03);
+	background-color: $colorLightBlue;
+	box-shadow: 0px 0.9375rem 1.25rem 0px rgba(33, 33, 51, 0.05);
+
 	&__navigation {
-		height: 108px;
+		height: 6.75rem;
 		display: flex;
+		justify-content: space-between;
 		align-items: center;
-		padding: 20px 0;
+		padding: 1.25rem 0;
+	}
+
+	&__menu {
+		background-color: $colorViolet;
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: 41.6666%;
+		padding-top: 10.44rem;
+		padding-left: 5rem;
+		display: flex;
+		flex-direction: column;
+		// display: none;
+
+		a {
+			color: $colorWhite;
+		}
 	}
 }
 
@@ -52,14 +71,8 @@ body {
 .navigation-header {
 	&__logo {
 		flex-shrink: 0;
-		width: 53px;
-		height: 68px;
-		margin-right: 46.73px;
-		> img {
-			width: 100%;
-			height: 100%;
-			object-fit: contain;
-		}
+		width: 3.33rem;
+		height: 4.25rem;
 	}
 
 	&__switch {
@@ -70,19 +83,16 @@ body {
 		column-gap: 0.1875rem;
 		border-radius: 3.125rem;
 		border: 2px solid #4d1299;
-		margin-right: 3.87rem;
 	}
 
 	&__links {
 		display: flex;
 		column-gap: 3.12rem;
-		margin-right: 3.88rem;
 	}
 
 	&__social {
 		display: flex;
 		column-gap: 0.94rem;
-		margin-right: 2.5rem;
 	}
 
 	&__phone {
@@ -92,7 +102,7 @@ body {
 		align-items: center;
 		border-radius: 3.125rem;
 		border: 2px solid #4d1299;
-		margin-right: 2.25rem;
+
 		> a {
 			color: $colorViolet;
 			font-size: 1.125rem;
@@ -103,13 +113,16 @@ body {
 	}
 
 	&__menu-button {
+		position: relative;
 		width: 1.5rem;
 		height: 1.125rem;
 		flex-shrink: 0;
-		> img {
-			width: 100%;
-			height: 100%;
-			object-fit: contain;
+		z-index: 5;
+		background: url(../img/svg/MenuBurger.svg) no-repeat center;
+		background-size: contain;
+		&.active {
+			background: url(../img/svg/MenuClose.svg) no-repeat center;
+			background-size: 90%;
 		}
 	}
 }
@@ -120,23 +133,16 @@ body {
 		justify-content: center;
 		align-items: center;
 		color: inherit;
-		font-size: 0.875rem;
+		font-size: 14px;
 		font-style: normal;
 		font-weight: 600;
-		line-height: 1.25rem;
+		line-height: 20px;
+		border-radius: 1.5625rem;
 	}
-	&__home {
-		&.active {
-			color: $colorWhite;
-			border-radius: 1.5625rem;
-			background: #4d1299;
-		}
-	}
-
+	&__home,
 	&__office {
 		&.active {
 			color: $colorWhite;
-			border-radius: 1.5625rem;
 			background: #4d1299;
 		}
 	}
@@ -146,13 +152,9 @@ body {
 	font-style: normal;
 	font-weight: 600;
 	line-height: normal;
+
 	> a {
 		color: inherit;
-	}
-	&__after-repair {
-	}
-
-	&__cost-estimate {
 	}
 }
 .social-links {
@@ -160,19 +162,46 @@ body {
 		width: 2.5rem;
 		height: 2.5rem;
 		flex-shrink: 0;
+
 		img {
 			width: 100%;
 			height: 100%;
-			object-fit: contain;
+			object-fit: fill;
 		}
 	}
-	&__instagram {
+}
+// ===========================
+.menu-header {
+	&__links {
+		margin-bottom: 5.81rem;
 	}
 
-	&__facebook {
+	&__link {
+		font-size: 2.25rem;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 3.063rem;
+		&:not(:last-child) {
+			margin-bottom: 1.5rem;
+		}
 	}
 
-	&__messenger {
+	&__social {
+		display: inline-flex;
+		justify-content: flex-start;
+		> a {
+			flex: 0 0 auto;
+			width: 2.5rem;
+			height: 2.5rem;
+			background-color: $colorWhite;
+			border-radius: 50%;
+		}
+	}
+
+	&__phone {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
 	}
 }
 
