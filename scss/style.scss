@@ -186,9 +186,14 @@ body {
 		}
 	}
 
+	&__references {
+		display: flex;
+	}
+
 	&__social {
 		display: inline-flex;
-		justify-content: flex-start;
+		column-gap: 0.91rem;
+		margin-right: 2.5rem;
 		> a {
 			flex: 0 0 auto;
 			width: 2.5rem;

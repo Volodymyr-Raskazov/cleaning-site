@@ -295,13 +295,19 @@ body {
 .menu-header__link:not(:last-child) {
   margin-bottom: 1.5rem;
 }
+.menu-header__references {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .menu-header__social {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-column-gap: 0.91rem;
+     -moz-column-gap: 0.91rem;
+          column-gap: 0.91rem;
+  margin-right: 2.5rem;
 }
 .menu-header__social > a {
   -webkit-box-flex: 0;
