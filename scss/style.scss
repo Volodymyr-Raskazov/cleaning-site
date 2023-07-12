@@ -37,6 +37,15 @@ body {
 .title {
 	font-family: $titleFont; //, Arial, Helvetica, sans-serif;
 }
+
+.footer-title {
+	color: $colorBlack;
+	font-size: 1.25rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 1.688rem;
+	margin-bottom: 1rem;
+}
 // ===========================
 .phone {
 	display: flex;
@@ -99,6 +108,26 @@ body {
 			padding-top: 9.56rem;
 			padding-left: 1.25rem;
 			width: 100%;
+		}
+	}
+}
+
+.main {
+	flex: 1 1 auto;
+}
+
+.footer {
+	border-radius: 1.875rem 1.875rem 0rem 0rem;
+	background: $colorBlue;
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 3.75rem;
+		margin-bottom: 6.81rem;
+		@media (max-width: 768px) {
+			flex-wrap: wrap;
+			row-gap: 2.5rem;
 		}
 	}
 }
@@ -177,7 +206,7 @@ body {
 		transition: all 0.5s ease-in;
 		&.active {
 			background: url(../img/svg/MenuClose.svg) no-repeat center;
-			background-size: 90%;
+			background-size: 95%;
 			transition: all 0.5s ease-out;
 		}
 	}
@@ -249,7 +278,7 @@ body {
 			img {
 				width: 100%;
 				height: 100%;
-				object-fit: cover;
+				object-fit: fill;
 			}
 
 			@media (max-width: 768px) {
@@ -275,3 +304,120 @@ body {
 // ===========================
 
 //====================	 Footer ====================
+.footer {
+	&__body {
+	}
+
+	&__aboute {
+	}
+
+	&__services {
+	}
+
+	&__contacts {
+	}
+
+	&__social {
+	}
+
+	&__rights {
+		display: flex;
+		column-gap: 3.12rem;
+		justify-content: center;
+		margin-bottom: 1rem;
+		@media (max-width: 768px) {
+			flex-wrap: wrap;
+			row-gap: 0.5rem;
+		}
+	}
+}
+
+.aboute-footer,
+.services-footer,
+.contacts-footer {
+	&__link {
+		font-size: 1.125rem;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 1.563rem;
+
+		&:not(:last-child) {
+			margin-bottom: 0.5rem;
+		}
+	}
+}
+
+.aboute-footer {
+	&__title {
+	}
+
+	&__links {
+	}
+
+	&__link {
+		a {
+			color: $colorBlack;
+		}
+	}
+}
+
+.services-footer {
+	&__title {
+	}
+
+	&__links {
+	}
+
+	&__link {
+		a {
+			color: $colorBlack;
+		}
+	}
+}
+
+.contacts-footer {
+	&__title {
+	}
+
+	&__links {
+	}
+
+	&__link {
+		a {
+			color: $colorViolet;
+			font-weight: 700;
+		}
+	}
+}
+
+.social-footer {
+	&__title {
+	}
+
+	&__links {
+		display: flex;
+		column-gap: 1rem;
+		a {
+			display: block;
+			width: 2.65rem;
+			height: 2.65rem;
+			background-color: $colorWhite;
+			border-radius: 50%;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: fill;
+			}
+		}
+	}
+}
+
+.rights-footer {
+	&__text {
+		color: rgba(27, 27, 27, 0.6);
+		font-size: 0.75rem;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 1rem;
+	}
+}
