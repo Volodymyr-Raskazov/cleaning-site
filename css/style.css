@@ -207,7 +207,7 @@ body {
     width: 65%;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 425px) {
   .header__menu {
     padding-top: 9.56rem;
     padding-left: 1.25rem;
@@ -277,7 +277,7 @@ body {
   -o-object-fit: fill;
      object-fit: fill;
 }
-@media (max-width: 425px) {
+@media (max-width: 600px) {
   .navigation-header__social {
     display: none;
   }
@@ -285,7 +285,7 @@ body {
 .navigation-header__phone {
   border: 2px solid #4d1299;
 }
-@media (max-width: 425px) {
+@media (max-width: 600px) {
   .navigation-header__phone {
     display: none;
   }
