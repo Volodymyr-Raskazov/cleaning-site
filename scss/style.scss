@@ -54,7 +54,7 @@ body {
 	align-items: center;
 	border-radius: 3.125rem;
 
-	> a {
+	a {
 		color: $colorViolet;
 		font-size: 1.125rem;
 		font-style: normal;
@@ -90,7 +90,7 @@ body {
 		padding-left: 5rem;
 		display: flex;
 		flex-direction: column;
-		transition: all 0.5s ease-in-out;
+		transition: all 0.3s ease-in-out;
 		opacity: 0;
 
 		&.active {
@@ -157,8 +157,12 @@ body {
 		font-weight: 600;
 		line-height: 1.563rem;
 
-		> a {
+		a {
 			color: inherit;
+
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 
 		@media (max-width: 768px) {
@@ -170,7 +174,7 @@ body {
 		display: flex;
 		column-gap: 0.94rem;
 
-		> a {
+		a {
 			width: 2.5rem;
 			height: 2.5rem;
 			flex-shrink: 0;
@@ -198,21 +202,28 @@ body {
 	&__menu-button {
 		position: relative;
 		width: 1.5rem;
-		height: 1.125rem;
+		height: 1.3125rem;
 		flex-shrink: 0;
+		padding: 0.125rem;
 		z-index: 5;
 		background: url(../img/svg/MenuBurger.svg) no-repeat center;
-		background-size: contain;
-		transition: all 0.5s ease-in;
+		background-size: 80%;
+		&:hover {
+			background-size: 90%;
+		}
+		transition: all 0.3s ease-out;
 		&.active {
 			background: url(../img/svg/MenuClose.svg) no-repeat center;
-			background-size: 95%;
-			transition: all 0.5s ease-out;
+			background-size: 80%;
+			transition: all 0.3s ease-in;
+			&:hover {
+				background-size: 90%;
+			}
 		}
 	}
 }
 .switch-pages {
-	> a {
+	a {
 		display: flex;
 		padding: 0.3125rem 0.875rem;
 		justify-content: center;
@@ -248,8 +259,11 @@ body {
 			margin-bottom: 1.5rem;
 		}
 
-		> a {
+		a {
 			color: $colorWhite;
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 
 		@media (max-width: 768px) {
@@ -268,7 +282,7 @@ body {
 		display: inline-flex;
 		column-gap: 0.91rem;
 		margin-right: 2.5rem;
-		> a {
+		a {
 			flex: 0 0 auto;
 			width: 2.5rem;
 			height: 2.5rem;

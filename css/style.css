@@ -152,7 +152,7 @@ body {
           align-items: center;
   border-radius: 3.125rem;
 }
-.phone > a {
+.phone a {
   color: #4d1299;
   font-size: 1.125rem;
   font-style: normal;
@@ -160,7 +160,7 @@ body {
   line-height: 1.563rem;
 }
 @media (max-width: 768px) {
-  .phone > a {
+  .phone a {
     font-size: 1rem;
     line-height: 1.375rem;
   }
@@ -200,9 +200,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   opacity: 0;
 }
 .header__menu.active {
@@ -286,8 +286,11 @@ body {
   font-weight: 600;
   line-height: 1.563rem;
 }
-.navigation-header__links > a {
+.navigation-header__links a {
   color: inherit;
+}
+.navigation-header__links a:hover {
+  text-decoration: underline;
 }
 @media (max-width: 768px) {
   .navigation-header__links {
@@ -302,13 +305,13 @@ body {
      -moz-column-gap: 0.94rem;
           column-gap: 0.94rem;
 }
-.navigation-header__social > a {
+.navigation-header__social a {
   width: 2.5rem;
   height: 2.5rem;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
-.navigation-header__social > a img {
+.navigation-header__social a img {
   width: 100%;
   height: 100%;
   -o-object-fit: fill;
@@ -330,25 +333,32 @@ body {
 .navigation-header__menu-button {
   position: relative;
   width: 1.5rem;
-  height: 1.125rem;
+  height: 1.3125rem;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  padding: 0.125rem;
   z-index: 5;
   background: url(../img/svg/MenuBurger.svg) no-repeat center;
-  background-size: contain;
-  -webkit-transition: all 0.5s ease-in;
-  -o-transition: all 0.5s ease-in;
-  transition: all 0.5s ease-in;
+  background-size: 80%;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.navigation-header__menu-button:hover {
+  background-size: 90%;
 }
 .navigation-header__menu-button.active {
   background: url(../img/svg/MenuClose.svg) no-repeat center;
-  background-size: 95%;
-  -webkit-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+  background-size: 80%;
+  -webkit-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.navigation-header__menu-button.active:hover {
+  background-size: 90%;
 }
 
-.switch-pages > a {
+.switch-pages a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -382,8 +392,11 @@ body {
 .menu-header__link:not(:last-child) {
   margin-bottom: 1.5rem;
 }
-.menu-header__link > a {
+.menu-header__link a {
   color: #ffffff;
+}
+.menu-header__link a:hover {
+  text-decoration: underline;
 }
 @media (max-width: 768px) {
   .menu-header__link:not(:first-child) {
@@ -405,7 +418,7 @@ body {
           column-gap: 0.91rem;
   margin-right: 2.5rem;
 }
-.menu-header__social > a {
+.menu-header__social a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
@@ -414,14 +427,14 @@ body {
   background-color: #ffffff;
   border-radius: 50%;
 }
-.menu-header__social > a img {
+.menu-header__social a img {
   width: 100%;
   height: 100%;
   -o-object-fit: fill;
      object-fit: fill;
 }
 @media (max-width: 768px) {
-  .menu-header__social > a {
+  .menu-header__social a {
     width: 2rem;
     height: 2rem;
   }
