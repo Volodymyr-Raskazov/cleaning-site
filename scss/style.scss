@@ -304,7 +304,7 @@ body {
 			border: 0.125rem solid $colorViolet;
 			&:hover {
 				border: 0.125rem solid $colorWhite;
-				background-color: $colorViolet;
+				background-color: #270850;
 			}
 
 			svg {
@@ -328,6 +328,7 @@ body {
 		background-color: $colorWhite;
 		border: 0.125rem solid $colorViolet;
 		&:hover {
+			background-color: #270850;
 			border: 0.125rem solid $colorWhite;
 		}
 	}

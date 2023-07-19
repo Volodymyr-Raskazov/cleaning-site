@@ -444,7 +444,7 @@ body {
 }
 .menu-header__social a:hover {
   border: 0.125rem solid #ffffff;
-  background-color: #4d1299;
+  background-color: #270850;
 }
 .menu-header__social a svg {
   width: 100%;
@@ -467,6 +467,7 @@ body {
   border: 0.125rem solid #4d1299;
 }
 .menu-header__phone:hover {
+  background-color: #270850;
   border: 0.125rem solid #ffffff;
 }
 
