@@ -106,7 +106,8 @@ h6 {
 body {
   color: #1b1b1b;
   font-family: "Open Sans";
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .wrapper {
@@ -132,6 +133,10 @@ body {
 
 .bg-light-blue {
   background-color: #f4f4f8;
+}
+
+.semi-bold {
+  font-weight: 700;
 }
 
 .title {
@@ -201,7 +206,6 @@ body {
 }
 
 .header {
-  position: relative;
   z-index: 50;
   background-color: #f4f4f8;
   -webkit-box-shadow: 0px 15px 20px 0px rgba(33, 33, 51, 0.03);
@@ -511,16 +515,13 @@ body {
   border: 0.125rem solid #ffffff;
 }
 
-.promo-section__body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.promo-section__top {
+  position: relative;
   padding: 6.38rem 0;
 }
 .promo-section__content {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 60%;
-          flex: 1 1 60%;
+  max-width: 60%;
+  display: inline-block;
 }
 .promo-section__title {
   font-family: Montserrat;
@@ -544,18 +545,57 @@ body {
   font-style: normal;
   font-weight: 600;
   line-height: 1.563rem;
-  margin-bottom: 12rem;
+  margin-bottom: 8.5rem;
 }
 .promo-section__img {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 40%;
-          flex: 1 1 40%;
+  position: absolute;
+  right: -15rem;
+  width: 75%;
 }
-.promo-section__img img {
-  top: 3.953rem;
-  width: 180%;
+
+.promo-section__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 2.5rem;
+     -moz-column-gap: 2.5rem;
+          column-gap: 2.5rem;
+  padding-bottom: 7.25rem;
+}
+.promo-section__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%;
+  text-align: center;
+}
+
+.item-promo__img {
+  position: relative;
+  padding-bottom: 51.923%;
+}
+.item-promo__img img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
   height: 100%;
-  margin: 0 -10rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.item-promo__title {
+  font-family: Montserrat;
+  font-size: 1.375rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.688rem;
+  margin-top: 3.12rem;
+  margin-bottom: 0.5rem;
+}
+.item-promo__text {
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .footer__rights {
