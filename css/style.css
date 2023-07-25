@@ -156,8 +156,17 @@ body {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
+  border: 0.125rem solid #4d1299;
   border-radius: 3.125rem;
   background: #4d1299;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.btn:hover {
+  background: #f4f4f8;
+}
+.btn:hover a {
+  color: #4d1299;
 }
 .btn a {
   color: #ffffff;
@@ -241,7 +250,6 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   opacity: 0;
 }
@@ -381,7 +389,7 @@ body {
   }
 }
 .navigation-header__phone {
-  border: 2px solid #4d1299;
+  border: 0.125rem solid #4d1299;
 }
 @media (max-width: 600px) {
   .navigation-header__phone {
@@ -399,7 +407,6 @@ body {
   background: url(../img/svg/MenuBurger.svg) no-repeat center;
   background-size: 80%;
   -webkit-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
 .navigation-header__menu-button:hover {
@@ -409,7 +416,6 @@ body {
   background: url(../img/svg/MenuClose.svg) no-repeat center;
   background-size: 80%;
   -webkit-transition: all 0.2s ease-in;
-  -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
 .navigation-header__menu-button.active:hover {
@@ -570,8 +576,11 @@ body {
 }
 
 .item-promo__img {
+  background: url(../img/section-promo/svg/ellipse.svg) no-repeat center;
+  background-size: auto 145%;
+  border-radius: 50%;
   position: relative;
-  padding-bottom: 51.923%;
+  padding-bottom: 52%;
 }
 .item-promo__img img {
   position: absolute;

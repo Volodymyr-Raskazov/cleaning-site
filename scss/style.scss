@@ -58,8 +58,16 @@ body {
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
+	border: 0.125rem solid $colorViolet;
 	border-radius: 3.125rem;
 	background: $colorViolet;
+	transition: all 0.3s ease-out;
+	&:hover {
+		background: $colorLightBlue;
+		a {
+			color: $colorViolet;
+		}
+	}
 	a {
 		color: $colorWhite;
 	}
@@ -245,7 +253,7 @@ body {
 	}
 
 	&__phone {
-		border: 2px solid $colorViolet;
+		border: 0.125rem solid $colorViolet;
 
 		@media (max-width: 600px) {
 			display: none;
@@ -433,8 +441,11 @@ body {
 }
 .item-promo {
 	&__img {
+		background: url(../img/section-promo/svg/ellipse.svg) no-repeat center;
+		background-size: auto 145%;
+		border-radius: 50%;
 		position: relative;
-		padding-bottom: 51.923%;
+		padding-bottom: 52%;
 		img {
 			position: absolute;
 			left: 0;
