@@ -576,11 +576,22 @@ body {
 }
 
 .item-promo__img {
-  background: url(../img/section-promo/svg/ellipse.svg) no-repeat center;
-  background-size: auto 145%;
-  border-radius: 50%;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-bottom: 52%;
+}
+.item-promo__img::before {
+  content: "";
+  width: 52%;
+  height: 100%;
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, rgba(77, 18, 153, 0.06) 0%, rgba(77, 18, 153, 0) 100%);
 }
 .item-promo__img img {
   position: absolute;
@@ -597,7 +608,7 @@ body {
   font-style: normal;
   font-weight: 600;
   line-height: 1.688rem;
-  margin-top: 3.12rem;
+  margin-top: 2.12rem;
   margin-bottom: 0.5rem;
 }
 .item-promo__text {

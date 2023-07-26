@@ -441,11 +441,21 @@ body {
 }
 .item-promo {
 	&__img {
-		background: url(../img/section-promo/svg/ellipse.svg) no-repeat center;
-		background-size: auto 145%;
-		border-radius: 50%;
 		position: relative;
+		// min-height: 52%;
+		display: flex;
+		justify-content: center;
+		// align-items: center;
 		padding-bottom: 52%;
+		&::before {
+			content: "";
+			// top: 25%;
+			width: 52%;
+			height: 100%;
+			position: absolute;
+			border-radius: 50%;
+			background: radial-gradient(circle at 50% 50%, rgba(77, 18, 153, 0.06) 0%, rgba(77, 18, 153, 0) 100%);
+		}
 		img {
 			position: absolute;
 			left: 0;
@@ -462,7 +472,7 @@ body {
 		font-style: normal;
 		font-weight: 600;
 		line-height: 1.688rem;
-		margin-top: 3.12rem;
+		margin-top: 2.12rem;
 		margin-bottom: 0.5rem;
 	}
 
