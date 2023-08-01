@@ -105,7 +105,7 @@ h6 {
 
 body {
   color: #1b1b1b;
-  font-family: "Open Sans";
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -140,7 +140,7 @@ body {
 }
 
 .title {
-  font-family: Montserrat;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
   font-weight: 700;
 }
 
@@ -619,7 +619,7 @@ body {
           flex: 1 1 25%;
   text-align: center;
 }
-@media (max-width: 1023.99px) {
+@media (max-width: 1023px) {
   .promo-section__item {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 calc(50% - 1.25rem);

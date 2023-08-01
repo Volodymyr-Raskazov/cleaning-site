@@ -18,7 +18,7 @@ $colorViolet: #4d1299;
 // Base styles ================================================================
 body {
 	color: $colorBlack;
-	font-family: $textFont; //, Arial, Helvetica, sans-serif;
+	font-family: $textFont, Arial, Helvetica, sans-serif;
 	overflow-x: hidden;
 	overflow-y: auto;
 }
@@ -48,7 +48,7 @@ body {
 }
 
 .title {
-	font-family: $titleFont; //, Arial, Helvetica, sans-serif;
+	font-family: $titleFont, Arial, Helvetica, sans-serif;
 	font-weight: 700;
 }
 
@@ -461,7 +461,7 @@ body {
 	&__item {
 		flex: 1 1 25%;
 		text-align: center;
-		@media (max-width: 1023.99px) {
+		@media (max-width: 1023px) {
 			flex: 1 1 calc(50% - 1.25rem);
 		}
 	}
