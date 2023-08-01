@@ -171,6 +171,11 @@ body {
 .btn a {
   color: #ffffff;
 }
+@media (max-width: 768px) {
+  .btn {
+    padding: 1rem 1.5rem;
+  }
+}
 
 .footer-title {
   color: #1b1b1b;
@@ -544,6 +549,13 @@ body {
     padding-bottom: 0;
   }
 }
+@media (max-width: 500px) {
+  .promo-section__content {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+}
 .promo-section__title {
   font-family: Montserrat;
   font-size: 3.4375rem;
@@ -553,17 +565,53 @@ body {
 .promo-section__title span {
   color: #4d1299;
 }
+@media (max-width: 768px) {
+  .promo-section__title {
+    font-size: 2.25rem;
+    line-height: 115%;
+    max-width: 28.3125rem;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 425px) {
+  .promo-section__title {
+    font-size: 1.625rem;
+    max-width: 100%;
+  }
+}
 .promo-section__subtitle {
   font-size: 1.125rem;
   line-height: normal;
   margin-bottom: 2.81rem;
   max-width: 37.75rem;
 }
+@media (max-width: 768px) {
+  .promo-section__subtitle {
+    font-size: 1rem;
+    max-width: 28.3125rem;
+    margin-bottom: 1.5rem;
+  }
+}
+@media (max-width: 500px) {
+  .promo-section__subtitle {
+    max-width: 100%;
+  }
+}
 .promo-section__button {
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 600;
   line-height: 1.563rem;
+}
+@media (max-width: 768px) {
+  .promo-section__button {
+    font-size: 0.9375rem;
+  }
+}
+@media (max-width: 500px) {
+  .promo-section__button {
+    width: 100%;
+  }
 }
 .promo-section__img {
   -webkit-box-flex: 0;
@@ -626,6 +674,13 @@ body {
             flex: 1 1 calc(50% - 1.25rem);
   }
 }
+@media (max-width: 425px) {
+  .promo-section__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
 
 .item-promo__img {
   position: relative;
@@ -637,6 +692,16 @@ body {
           justify-content: center;
   padding-bottom: 52%;
 }
+@media (max-width: 768px) {
+  .item-promo__img {
+    padding-bottom: 48%;
+  }
+}
+@media (max-width: 425px) {
+  .item-promo__img {
+    padding-bottom: 36%;
+  }
+}
 .item-promo__img::before {
   content: "";
   width: 52%;
@@ -644,6 +709,16 @@ body {
   position: absolute;
   border-radius: 50%;
   background: radial-gradient(circle at 50% 50%, rgba(77, 18, 153, 0.06) 0%, rgba(77, 18, 153, 0) 100%);
+}
+@media (max-width: 768px) {
+  .item-promo__img::before {
+    width: 48%;
+  }
+}
+@media (max-width: px) {
+  .item-promo__img::before {
+    width: 36%;
+  }
 }
 .item-promo__img img {
   position: absolute;

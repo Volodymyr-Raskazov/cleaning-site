@@ -71,6 +71,9 @@ body {
 	a {
 		color: $colorWhite;
 	}
+	@media (max-width: 768px) {
+		padding: 1rem 1.5rem;
+	}
 }
 
 .footer-title {
@@ -398,6 +401,9 @@ body {
 		@media (max-width: 1439px) {
 			padding-bottom: 0;
 		}
+		@media (max-width: 500px) {
+			flex: 1 1 auto;
+		}
 	}
 
 	&__title {
@@ -408,6 +414,16 @@ body {
 		span {
 			color: $colorViolet;
 		}
+		@media (max-width: 768px) {
+			font-size: 2.25rem;
+			line-height: 115%;
+			max-width: 28.3125rem;
+			margin-bottom: 1rem;
+		}
+		@media (max-width: 425px) {
+			font-size: 1.625rem;
+			max-width: 100%;
+		}
 	}
 
 	&__subtitle {
@@ -415,6 +431,14 @@ body {
 		line-height: normal;
 		margin-bottom: 2.81rem;
 		max-width: 37.75rem;
+		@media (max-width: 768px) {
+			font-size: 1rem;
+			max-width: 28.3125rem;
+			margin-bottom: 1.5rem;
+		}
+		@media (max-width: 500px) {
+			max-width: 100%;
+		}
 	}
 
 	&__button {
@@ -422,6 +446,12 @@ body {
 		font-style: normal;
 		font-weight: 600;
 		line-height: 1.563rem;
+		@media (max-width: 768px) {
+			font-size: 0.9375rem;
+		}
+		@media (max-width: 500px) {
+			width: 100%;
+		}
 	}
 
 	&__img {
@@ -464,6 +494,9 @@ body {
 		@media (max-width: 1023px) {
 			flex: 1 1 calc(50% - 1.25rem);
 		}
+		@media (max-width: 425px) {
+			flex: 1 1 100%;
+		}
 	}
 }
 .item-promo {
@@ -472,6 +505,12 @@ body {
 		display: flex;
 		justify-content: center;
 		padding-bottom: 52%;
+		@media (max-width: 768px) {
+			padding-bottom: 48%;
+		}
+		@media (max-width: 425px) {
+			padding-bottom: 36%;
+		}
 		&::before {
 			content: "";
 			width: 52%;
@@ -479,6 +518,12 @@ body {
 			position: absolute;
 			border-radius: 50%;
 			background: radial-gradient(circle at 50% 50%, rgba(77, 18, 153, 0.06) 0%, rgba(77, 18, 153, 0) 100%);
+			@media (max-width: 768px) {
+				width: 48%;
+			}
+			@media (max-width: px) {
+				width: 36%;
+			}
 		}
 		img {
 			position: absolute;
