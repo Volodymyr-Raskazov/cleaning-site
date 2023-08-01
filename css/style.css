@@ -391,7 +391,7 @@ body {
 .navigation-header__phone {
   border: 0.125rem solid #4d1299;
 }
-@media (max-width: 600px) {
+@media (max-width: 1023.99px) {
   .navigation-header__phone {
     display: none;
   }
@@ -522,12 +522,27 @@ body {
 }
 
 .promo-section__top {
-  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding: 6.38rem 0;
 }
+@media (max-width: 1439px) {
+  .promo-section__top {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
 .promo-section__content {
-  max-width: 60%;
-  display: inline-block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 42.375rem;
+          flex: 0 0 42.375rem;
+  padding-bottom: 8.5rem;
+}
+@media (max-width: 1439px) {
+  .promo-section__content {
+    padding-bottom: 0;
+  }
 }
 .promo-section__title {
   font-family: Montserrat;
@@ -542,18 +557,44 @@ body {
   font-size: 1.125rem;
   line-height: normal;
   margin-bottom: 2.81rem;
+  max-width: 37.75rem;
 }
 .promo-section__button {
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 600;
   line-height: 1.563rem;
-  margin-bottom: 8.5rem;
 }
 .promo-section__img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 52.25rem;
+          flex: 0 1 52.25rem;
+  position: relative;
+  margin-left: -4rem;
+  margin-right: -8rem;
+}
+@media (max-width: 1439px) {
+  .promo-section__img {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    padding-bottom: 67.1%;
+    margin: 0;
+  }
+}
+.promo-section__img img {
   position: absolute;
-  right: -15rem;
-  width: 75%;
+  left: 0;
+  top: 1.25rem;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 1439px) {
+  .promo-section__img img {
+    top: 0.25rem;
+  }
 }
 
 .promo-section__items {
@@ -565,11 +606,25 @@ body {
           column-gap: 2.5rem;
   padding-bottom: 7.25rem;
 }
+@media (max-width: 1023px) {
+  .promo-section__items {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    row-gap: 2.5rem;
+  }
+}
 .promo-section__item {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 25%;
           flex: 1 1 25%;
   text-align: center;
+}
+@media (max-width: 1023.99px) {
+  .promo-section__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 calc(50% - 1.25rem);
+            flex: 1 1 calc(50% - 1.25rem);
+  }
 }
 
 .item-promo__img {
