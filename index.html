@@ -12,7 +12,7 @@
 </head>
 
 <body>
-	<div class="wrapper">
+	<div class="wrapper flex">
 		<header class="header">
 			<div class="header__container">
 				<nav class="header__navigation navigation-header">
@@ -141,15 +141,15 @@
 							</g>
 						</svg>
 					</a>
-					<div class="navigation-header__switch switch-pages">
+					<div class="navigation-header__switch switch-pages flex">
 						<a href="home.html" class="switch-pages__home active">Дім</a>
 						<a href="office.html" class="switch-pages__office">Офіс</a>
 					</div>
-					<div class="navigation-header__links">
+					<div class="navigation-header__links flex">
 						<a href="#">Після ремонту</a>
 						<a href="#">Розрахунок вартості</a>
 					</div>
-					<div class="navigation-header__social">
+					<div class="navigation-header__social flex">
 						<a href="#">
 							<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<g id="Instagram">
@@ -197,8 +197,8 @@
 							<a href="#">Контакти</a>
 						</li>
 					</ul>
-					<div class="menu-header__references">
-						<div class="menu-header__social">
+					<div class="menu-header__references flex">
+						<div class="menu-header__social flex">
 							<a href="#">
 								<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<g id="Instagram">
@@ -235,9 +235,9 @@
 		</header>
 
 		<main class="main">
-			<section class="main__promo promo-section bg-light-blue">
+			<section class="main__promo promo-section bg-light-violet">
 				<div class="promo-section__container">
-					<div class="promo-section__top">
+					<div class="promo-section__top flex">
 						<div class="promo-section__content">
 							<h1 class="promo-section__title title"><span>Приберемо</span> у вашому будинку чи квартирі<br>у Лодзі всього <span>за 399zł</span></h1>
 							<p class="promo-section__subtitle">Клінінгова компанія Comfort Group пропонує акційну підписку на послуги клінінгу у Лодзі всього за <span class="semi-bold">399zł</span>. Підписка включає прибирання в кімнатах, санвузлі та кухні.</p>
@@ -248,31 +248,31 @@
 						<div class="promo-section__img ibg"><img src="img/section-promo/promo.png" alt="Promo img"></div>
 					</div>
 
-					<div class="promo-section__items">
+					<div class="promo-section__items flex">
 						<div class="promo-section__item item-promo">
 							<div class="item-promo__img">
-								<img src="img/section-promo/money-01.png" alt="money">
+								<img src="img/svg/money.svg" alt="money">
 							</div>
 							<h3 class="item-promo__title">Бюджетна підписка</h3>
 							<p class="item-promo__text">Вартість місячної підписки всього <span class="semi-bold">399zł</span>. Вона включає 2 прибирання на місяць.</p>
 						</div>
 						<div class="promo-section__item item-promo">
 							<div class="item-promo__img ibg">
-								<img src="img/section-promo/security-01.png" alt="security">
+								<img src="img/svg/security.svg" alt="security">
 							</div>
 							<h3 class="item-promo__title">Безпечна хімія</h3>
 							<p class="item-promo__text">У прибиранні ми використовуємо лише якісну та не агресивну хімію <span class="semi-bold">KIEHL</span> та <span class="semi-bold">Pomoc Domowa</span>.</p>
 						</div>
 						<div class="promo-section__item item-promo">
 							<div class="item-promo__img ibg">
-								<img src="img/section-promo/technique.png" alt="technique">
+								<img src="img/svg/technique.svg" alt="technique">
 							</div>
 							<h3 class="item-promo__title">Професійна техніка</h3>
 							<p class="item-promo__text">Наші головні помічники у роботі - це техніка <span class="semi-bold">KARCHER!</span> Вони забезпечують дійсно “кристальне” прибирання.</p>
 						</div>
 						<div class="promo-section__item item-promo">
 							<div class="item-promo__img ibg">
-								<img src="img/section-promo/quality-01.png" alt="quality">
+								<img src="img/svg/quality.svg" alt="quality">
 							</div>
 							<h3 class="item-promo__title">Контроль якості</h3>
 							<p class="item-promo__text">Ми завжди <span class="semi-bold">запитуємо відгук клієнта</span>. Якщо ви не задоволені прибиранням —ми одразу приїдемо і все виправимо!</p>
@@ -280,11 +280,56 @@
 					</div>
 				</div>
 			</section>
+			<section class="main__benefits benefits-section bg-light-violet">
+				<div class="benefits-section__container">
+					<div class="benefits-section__top flex">
+						<div class="benefits-section__content">
+							<h1 class="benefits-section__title title">Comfort Group допоможе вам організувати та підтримувати чистоту у вашому будинку</span></h1>
+							<ul class="benefits-section__list">
+								<li>Проведемо прибирання квартири перед приходом гостей.</li>
+								<li>Приберемо наслідки гучної вечірки.</li>
+								<li>Зробимо генеральне прибирання і позбавимо вас необхідності витрачати на це свій вільний час.</li>
+								<li>Будемо підтримувати чистоту у домі навіть коли ви на роботі!</li>
+							</ul>
+
+						</div>
+						<div class="benefits-section__img ibg"><img src="img/section-benefits/benefits.png" alt="Promo img"></div>
+					</div>
+
+					<div class="benefits-section__items flex">
+						<div class="benefits-section__item item-benefits flex">
+							<div class="item-benefits__img ibg">
+								<img src="img/svg/technique.svg" alt="technique">
+							</div>
+							<h3 class="item-benefits__title">Техніка KARCHER</h3>
+							<p class="item-benefits__text"><span class="semi-bold">KARCHER</span> — це професійна техніка, що забезпечує ретельне та якісне прибирання. Весь інвентар та техніки наші клінери приносять з собою!</p>
+						</div>
+						<div class="benefits-section__item item-benefits">
+							<div class="item-benefits__img ibg">
+								<img src="img/svg/detergents.svg" alt="detergents">
+							</div>
+							<h3 class="item-benefits__title">Гіпоалергенні миючі засоби</h3>
+							<p class="item-benefits__text">У прибиранні ми використовуємо лише якісну та не агресивну хімію <span class="semi-bold">KIEHL</span> та <span class="semi-bold">Pomoc Domowa</span>.</p>
+						</div>
+						<div class="benefits-section__item item-benefits">
+							<div class="item-benefits__img ibg">
+								<img src="img/svg/technique.svg" alt="technique">
+							</div>
+							<h3 class="item-benefits__title">Досвідчений персонал</h3>
+							<p class="item-benefits__text">Всі наші клінери спеціально підготовленні та <span class="semi-bold">пройшли навчання</span> від нашої компанії. Ми збираємо відгуки про кожного працівника та <span class="semi-bold">контролюємо їх роботу</span></p>
+						</div>
+
+					</div>
+					<button class="benefits-section__button btn">
+						<a href="#">Замовити прибирання</a>
+					</button>
+				</div>
+			</section>
 		</main>
 
 		<footer class="footer">
 			<div class="footer__container">
-				<div class="footer__body">
+				<div class="footer__body flex">
 					<div class="footer__aboute aboute-footer">
 						<h3 class="aboute-footer__title footer-title">Про нас</h3>
 						<ul class="aboute-footer__links">
