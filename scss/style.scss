@@ -9,11 +9,11 @@
 // Set variables ==============================================================
 $titleFont: Montserrat;
 $textFont: "Open Sans";
-$colorLightBlue: #f4f4f8;
-$colorBlue: #ebe7f3;
+$colorLightViolet: #f4f4f8;
+$colorViolet: #ebe7f3;
 $colorWhite: #ffffff;
 $colorBlack: #1b1b1b;
-$colorViolet: #4d1299;
+$colorDarkViolet: #4d1299;
 
 // Base styles ================================================================
 body {
@@ -42,12 +42,20 @@ body {
 	background-color: $colorWhite;
 }
 
+.bg-violet {
+	background-color: $colorViolet;
+}
+
 .bg-light-violet {
-	background-color: $colorLightBlue;
+	background-color: $colorLightViolet;
+}
+
+.bold {
+	font-weight: 700;
 }
 
 .semi-bold {
-	font-weight: 700;
+	font-weight: 600;
 }
 
 .title {
@@ -61,14 +69,14 @@ body {
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
-	border: 0.125rem solid $colorViolet;
+	border: 0.125rem solid $colorDarkViolet;
 	border-radius: 3.125rem;
-	background: $colorViolet;
+	background: $colorDarkViolet;
 	transition: all 0.3s ease-out;
 	&:hover {
-		background: $colorLightBlue;
+		background: $colorLightViolet;
 		a {
-			color: $colorViolet;
+			color: $colorDarkViolet;
 		}
 	}
 	a {
@@ -100,11 +108,11 @@ body {
 	justify-content: center;
 	align-items: center;
 	border-radius: 3.125rem;
-	color: $colorViolet;
+	color: $colorDarkViolet;
 	cursor: pointer;
 	&:hover {
 		color: $colorWhite;
-		background-color: $colorViolet;
+		background-color: $colorDarkViolet;
 	}
 	a {
 		color: inherit;
@@ -121,7 +129,7 @@ body {
 // ===========================
 .header {
 	z-index: 50;
-	background-color: $colorLightBlue;
+	background-color: $colorLightViolet;
 	box-shadow: 0px 15px 20px 0px rgba(33, 33, 51, 0.03);
 
 	&__navigation {
@@ -133,7 +141,7 @@ body {
 	}
 
 	&__menu {
-		background-color: $colorViolet;
+		background-color: $colorDarkViolet;
 		position: absolute;
 		top: 0;
 		right: -100%;
@@ -182,11 +190,18 @@ body {
 	&__benefits {
 		padding-bottom: 7.25rem;
 	}
+	&__package {
+		padding-top: 7.25rem;
+		padding-bottom: 3rem;
+		@media (max-width: 768px) {
+			padding-top: 4.5rem;
+		}
+	}
 }
 
 .footer {
 	border-radius: 1.875rem 1.875rem 0 0;
-	background: $colorBlue;
+	background: $colorViolet;
 
 	&__body {
 		justify-content: space-between;
@@ -213,7 +228,7 @@ body {
 		align-items: center;
 		column-gap: 0.1875rem;
 		border-radius: 3.125rem;
-		border: 0.125rem solid $colorViolet;
+		border: 0.125rem solid $colorDarkViolet;
 	}
 
 	&__links {
@@ -244,14 +259,14 @@ body {
 			border-radius: 50%;
 			flex-shrink: 0;
 			&:hover {
-				background: $colorViolet;
+				background: $colorDarkViolet;
 			}
 
 			svg {
 				width: 100%;
 				height: 100%;
 				object-fit: fill;
-				fill: $colorViolet;
+				fill: $colorDarkViolet;
 				&:hover {
 					fill: $colorWhite;
 				}
@@ -264,7 +279,7 @@ body {
 	}
 
 	&__phone {
-		border: 0.125rem solid $colorViolet;
+		border: 0.125rem solid $colorDarkViolet;
 
 		@media (max-width: 1023.99px) {
 			display: none;
@@ -311,7 +326,7 @@ body {
 	&__office {
 		&.active {
 			color: $colorWhite;
-			background: $colorViolet;
+			background: $colorDarkViolet;
 		}
 	}
 }
@@ -358,7 +373,7 @@ body {
 			height: 2.5rem;
 			background-color: $colorWhite;
 			border-radius: 50%;
-			border: 0.125rem solid $colorViolet;
+			border: 0.125rem solid $colorDarkViolet;
 			&:hover {
 				border: 0.125rem solid $colorWhite;
 				background-color: #270850;
@@ -368,7 +383,7 @@ body {
 				width: 100%;
 				height: 100%;
 				object-fit: fill;
-				fill: $colorViolet;
+				fill: $colorDarkViolet;
 				&:hover {
 					fill: $colorWhite;
 				}
@@ -383,7 +398,7 @@ body {
 
 	&__phone {
 		background-color: $colorWhite;
-		border: 0.125rem solid $colorViolet;
+		border: 0.125rem solid $colorDarkViolet;
 		&:hover {
 			background-color: #270850;
 			border: 0.125rem solid $colorWhite;
@@ -419,7 +434,7 @@ body {
 		line-height: 115%;
 		margin-bottom: 2rem;
 		span {
-			color: $colorViolet;
+			color: $colorDarkViolet;
 		}
 		@media (max-width: 768px) {
 			font-size: 2.25rem;
@@ -487,9 +502,6 @@ body {
 			@media (max-width: 1439px) {
 				top: 0.25rem;
 			}
-			// @media (max-width: 425px) {
-			// 	object-fit: contain;
-			// }
 		}
 	}
 }
@@ -576,6 +588,198 @@ body {
 }
 
 // ===========================
+// section-subscription
+.package-section {
+	&__body {
+		flex-direction: column;
+	}
+
+	&__header {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__subscription {
+		gap: 5.6rem;
+		justify-content: space-between;
+		align-items: center;
+		padding: 5.5rem 3.75rem;
+		background-color: $colorViolet;
+		border-radius: 1.875rem;
+		margin-bottom: 3rem;
+		@media (max-width: 1024px) {
+			flex-direction: column;
+			gap: 3.3rem;
+			padding: 3.75rem;
+		}
+	}
+
+	&__monthly {
+		flex-direction: column;
+		flex: 0 1 calc(50% - 2.8rem);
+		@media (max-width: 768px) {
+			flex: 1 1 auto;
+			align-self: flex-start;
+			max-width: 28.125rem;
+		}
+	}
+
+	&__request {
+		flex-direction: column;
+		flex: 0 1 calc(50% - 2.8rem);
+		justify-content: center;
+		align-items: center;
+		@media (max-width: 768px) {
+			flex: 1 1 auto;
+			max-width: 25rem;
+		}
+	}
+
+	&__discount {
+		justify-content: space-between;
+		align-items: center;
+		padding: 1.9rem 3.75rem;
+		background-color: $colorDarkViolet;
+		border-radius: 1.875rem;
+	}
+}
+
+.header-package {
+	&__title {
+		font-size: 2.875rem;
+		line-height: 3.5rem;
+		margin-bottom: 1rem;
+		@media (max-width: 768px) {
+			font-size: 2rem;
+			line-height: 2.438rem;
+			margin-bottom: 0.5rem;
+		}
+	}
+
+	&__subtitle {
+		text-align: center;
+		font-size: 1.125rem;
+		line-height: 1.563rem;
+		max-width: 41.0625rem;
+		margin-bottom: 3rem;
+		@media (max-width: 768px) {
+			font-size: 1rem;
+			line-height: 1.375rem;
+		}
+	}
+}
+
+.monthly-subscription {
+	&__title {
+		font-size: 2rem;
+		line-height: 115%;
+		margin-bottom: 2rem;
+		@media (max-width: 768px) {
+			font-size: 1.75rem;
+			margin-bottom: 1rem;
+		}
+	}
+
+	&__list {
+		list-style: outside url(../img/svg/li-mark.svg);
+		font-size: 1.125rem;
+		line-height: 1.563rem;
+		padding-left: 1.4rem;
+		margin-bottom: 2rem;
+		li:not(:last-child) {
+			margin-bottom: 0.5rem;
+		}
+		@media (max-width: 768px) {
+			font-size: 1rem;
+			line-height: 1.375rem;
+			margin-bottom: 1rem;
+		}
+	}
+
+	&__subtitle {
+		color: $colorDarkViolet;
+		font-size: 1.125rem;
+		line-height: 1.563rem;
+		position: relative;
+		padding-left: 3.875rem;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			background-image: url(../img/svg/valentin.svg);
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+		@media (max-width: 1200px) {
+			padding-left: 5.875rem;
+		}
+		@media (max-width: 768px) {
+			font-size: 1rem;
+			line-height: 1.375rem;
+			padding-left: 3.875rem;
+		}
+	}
+}
+
+.request-subscription {
+	&__title {
+		color: $colorDarkViolet;
+		font-size: 3.125rem;
+		line-height: 4.25rem;
+		margin-bottom: 0.5rem;
+		@media (max-width: 768px) {
+			font-size: 2.25rem;
+			line-height: 2.587rem;
+		}
+	}
+
+	&__content {
+		text-align: center;
+		font-size: 1.125rem;
+		line-height: 1.563rem;
+		margin-bottom: 2.25rem;
+		@media (max-width: 768px) {
+			font-size: 1rem;
+			line-height: 1.375rem;
+			margin-bottom: 2rem;
+		}
+	}
+
+	&__button {
+		font-size: 1.125rem;
+		line-height: 1.563rem;
+		width: 100%;
+	}
+}
+
+.discount-subscription {
+	&__title {
+		flex: 0 1 60%;
+		color: $colorViolet;
+		font-size: 2rem;
+		line-height: 115%;
+		span {
+			background-color: #ff8427;
+			color: $colorWhite;
+			border-radius: 3.125rem;
+			padding: 0 0.5rem;
+		}
+	}
+
+	&__imagebg {
+		flex: 1 1 auto;
+	}
+
+	&__img {
+		padding-bottom: 67%;
+	}
+}
+
+// ===========================
 // section-benefits
 .benefits-section {
 	&__top {
@@ -606,7 +810,6 @@ body {
 
 	&__title {
 		font-size: 2rem;
-		font-weight: 600;
 		line-height: 115%;
 		margin-bottom: 1.5rem;
 		@media (max-width: 768px) {
@@ -733,14 +936,12 @@ body {
 
 	&__title {
 		font-size: 1.375rem;
-		font-weight: 600;
 		line-height: 1.688rem;
 		margin-bottom: 0.5rem;
 	}
 
 	&__text {
 		font-size: 1.125rem;
-		font-weight: 400;
 		line-height: 1.375rem;
 	}
 }
@@ -794,7 +995,7 @@ body {
 		}
 
 		a:hover {
-			color: $colorViolet;
+			color: $colorDarkViolet;
 			text-decoration: underline;
 		}
 
@@ -836,7 +1037,7 @@ body {
 	&__link {
 		&:last-child,
 		a {
-			color: $colorViolet;
+			color: $colorDarkViolet;
 			font-weight: 700;
 		}
 	}
@@ -856,14 +1057,14 @@ body {
 			background-color: $colorWhite;
 			border-radius: 50%;
 			&:hover {
-				background: $colorViolet;
+				background: $colorDarkViolet;
 			}
 
 			svg {
 				width: 100%;
 				height: 100%;
 				object-fit: fill;
-				fill: $colorViolet;
+				fill: $colorDarkViolet;
 				&:hover {
 					fill: $colorWhite;
 				}

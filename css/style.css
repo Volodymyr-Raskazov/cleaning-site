@@ -133,12 +133,20 @@ body {
   background-color: #ffffff;
 }
 
+.bg-violet {
+  background-color: #ebe7f3;
+}
+
 .bg-light-violet {
   background-color: #f4f4f8;
 }
 
-.semi-bold {
+.bold {
   font-weight: 700;
+}
+
+.semi-bold {
+  font-weight: 600;
 }
 
 .title {
@@ -302,6 +310,15 @@ body {
 
 .main__benefits {
   padding-bottom: 7.25rem;
+}
+.main__package {
+  padding-top: 7.25rem;
+  padding-bottom: 3rem;
+}
+@media (max-width: 768px) {
+  .main__package {
+    padding-top: 4.5rem;
+  }
 }
 
 .footer {
@@ -744,6 +761,240 @@ body {
   line-height: normal;
 }
 
+.package-section__body {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.package-section__header {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.package-section__subscription {
+  gap: 5.6rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5.5rem 3.75rem;
+  background-color: #ebe7f3;
+  border-radius: 1.875rem;
+  margin-bottom: 3rem;
+}
+@media (max-width: 1024px) {
+  .package-section__subscription {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 3.3rem;
+    padding: 3.75rem;
+  }
+}
+.package-section__monthly {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 calc(50% - 2.8rem);
+          flex: 0 1 calc(50% - 2.8rem);
+}
+@media (max-width: 768px) {
+  .package-section__monthly {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    max-width: 28.125rem;
+  }
+}
+.package-section__request {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 calc(50% - 2.8rem);
+          flex: 0 1 calc(50% - 2.8rem);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 768px) {
+  .package-section__request {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    max-width: 25rem;
+  }
+}
+.package-section__discount {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.9rem 3.75rem;
+  background-color: #4d1299;
+  border-radius: 1.875rem;
+}
+
+.header-package__title {
+  font-size: 2.875rem;
+  line-height: 3.5rem;
+  margin-bottom: 1rem;
+}
+@media (max-width: 768px) {
+  .header-package__title {
+    font-size: 2rem;
+    line-height: 2.438rem;
+    margin-bottom: 0.5rem;
+  }
+}
+.header-package__subtitle {
+  text-align: center;
+  font-size: 1.125rem;
+  line-height: 1.563rem;
+  max-width: 41.0625rem;
+  margin-bottom: 3rem;
+}
+@media (max-width: 768px) {
+  .header-package__subtitle {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+.monthly-subscription__title {
+  font-size: 2rem;
+  line-height: 115%;
+  margin-bottom: 2rem;
+}
+@media (max-width: 768px) {
+  .monthly-subscription__title {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+}
+.monthly-subscription__list {
+  list-style: outside url(../img/svg/li-mark.svg);
+  font-size: 1.125rem;
+  line-height: 1.563rem;
+  padding-left: 1.4rem;
+  margin-bottom: 2rem;
+}
+.monthly-subscription__list li:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 768px) {
+  .monthly-subscription__list {
+    font-size: 1rem;
+    line-height: 1.375rem;
+    margin-bottom: 1rem;
+  }
+}
+.monthly-subscription__subtitle {
+  color: #4d1299;
+  font-size: 1.125rem;
+  line-height: 1.563rem;
+  position: relative;
+  padding-left: 3.875rem;
+}
+.monthly-subscription__subtitle::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-image: url(../img/svg/valentin.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media (max-width: 1200px) {
+  .monthly-subscription__subtitle {
+    padding-left: 5.875rem;
+  }
+}
+@media (max-width: 768px) {
+  .monthly-subscription__subtitle {
+    font-size: 1rem;
+    line-height: 1.375rem;
+    padding-left: 3.875rem;
+  }
+}
+
+.request-subscription__title {
+  color: #4d1299;
+  font-size: 3.125rem;
+  line-height: 4.25rem;
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 768px) {
+  .request-subscription__title {
+    font-size: 2.25rem;
+    line-height: 2.587rem;
+  }
+}
+.request-subscription__content {
+  text-align: center;
+  font-size: 1.125rem;
+  line-height: 1.563rem;
+  margin-bottom: 2.25rem;
+}
+@media (max-width: 768px) {
+  .request-subscription__content {
+    font-size: 1rem;
+    line-height: 1.375rem;
+    margin-bottom: 2rem;
+  }
+}
+.request-subscription__button {
+  font-size: 1.125rem;
+  line-height: 1.563rem;
+  width: 100%;
+}
+
+.discount-subscription__title {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 60%;
+          flex: 0 1 60%;
+  color: #ebe7f3;
+  font-size: 2rem;
+  line-height: 115%;
+}
+.discount-subscription__title span {
+  background-color: #ff8427;
+  color: #ffffff;
+  border-radius: 3.125rem;
+  padding: 0 0.5rem;
+}
+.discount-subscription__imagebg {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.discount-subscription__img {
+  padding-bottom: 67%;
+}
+
 .benefits-section__top {
   padding-bottom: 10rem;
 }
@@ -787,7 +1038,6 @@ body {
 }
 .benefits-section__title {
   font-size: 2rem;
-  font-weight: 600;
   line-height: 115%;
   margin-bottom: 1.5rem;
 }
@@ -962,13 +1212,11 @@ body {
 }
 .item-benefits__title {
   font-size: 1.375rem;
-  font-weight: 600;
   line-height: 1.688rem;
   margin-bottom: 0.5rem;
 }
 .item-benefits__text {
   font-size: 1.125rem;
-  font-weight: 400;
   line-height: 1.375rem;
 }
 
