@@ -338,6 +338,9 @@ body {
     padding: 4rem 0;
   }
 }
+.main__credence {
+  padding-top: 7.25rem;
+}
 
 .footer {
   border-radius: 1.875rem 1.875rem 0 0;
@@ -1423,6 +1426,101 @@ body {
     font-size: 1rem;
     line-height: 1.375rem;
   }
+}
+
+.credence-section__body {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 7.25rem 3.75rem;
+  border-radius: 1.875rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.credence-section__title {
+  font-family: Montserrat;
+  font-size: 2.875rem;
+  line-height: 3.5rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.credence-section__items {
+  position: relative;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+.credence-section__items::before {
+  content: "";
+  position: absolute;
+  background: url(../img/section-credence/sponge.png) no-repeat center;
+  background-size: cover;
+  width: 8.75rem;
+  height: 8.75rem;
+  right: -4.28rem;
+  top: 35%;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  .credence-section__items::before {
+    top: 42%;
+  }
+}
+.credence-section__items::after {
+  content: "";
+  position: absolute;
+  background: url(../img/section-credence/brush.png) no-repeat center;
+  background-size: contain;
+  width: 9.79rem;
+  height: 9.79rem;
+  left: -2.3rem;
+  bottom: -7.75rem;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  .credence-section__items::after {
+    width: 8.38rem;
+    height: 8.38rem;
+    bottom: -6.75rem;
+    left: 0;
+  }
+}
+.credence-section__item {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 calc(50% - 1.25rem);
+          flex: 0 1 calc(50% - 1.25rem);
+  background-color: #f4f4f8;
+  border-radius: 1.875rem;
+  padding: 2.5rem;
+}
+.credence-section__item:nth-child(2) {
+  z-index: 10;
+}
+.credence-section__button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.item-credence__title {
+  font-size: 2rem;
+  line-height: 2.75rem;
+  color: #4d1299;
+  margin-bottom: 1.5rem;
+}
+.item-credence__subtitle {
+  font-family: Montserrat;
+  font-size: 1.375rem;
+  line-height: 1.688rem;
+  margin-bottom: 1rem;
+}
+.item-credence__text {
+  font-size: 1.125rem;
+  line-height: 1.563rem;
 }
 
 .footer__rights {
