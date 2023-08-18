@@ -224,6 +224,15 @@ body {
 			padding: 4rem 0;
 		}
 	}
+	&__questions {
+		padding-top: 7.25rem;
+		@media (max-width: 768px) {
+			padding: 4.5rem 0;
+		}
+		@media (max-width: 425px) {
+			padding: 4rem 0;
+		}
+	}
 }
 
 .footer {
@@ -1269,6 +1278,57 @@ body {
 }
 
 // ===========================
+// questions-section
+.questions-section {
+	&__title {
+		text-align: center;
+		font-size: 2.875rem;
+		line-height: 3.5rem;
+		margin-bottom: 4rem;
+	}
+
+	&__body {
+		flex-direction: column;
+		align-items: center;
+		border-radius: 1.875rem;
+		background-color: $colorViolet;
+		padding: 3.75rem;
+	}
+
+	&__accordion {
+		flex-direction: column;
+		margin-bottom: 3.75rem;
+	}
+
+	&__button {
+	}
+}
+
+.accordion-items {
+	&__item {
+	}
+
+	&__button {
+		width: 100%;
+		justify-content: space-between;
+		span {
+			flex: 0 0 auto;
+			justify-content: center;
+			align-items: center;
+			width: 1.8125rem;
+			height: 1.8125rem;
+			background-color: $colorDarkViolet;
+			border-radius: 50%;
+			position: relative;
+			&::before {
+				content: "";
+			}
+		}
+	}
+
+	&__content {
+	}
+}
 
 // ===========================
 
