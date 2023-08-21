@@ -353,16 +353,16 @@ body {
 }
 @media (max-width: 768px) {
   .main__credence {
-    padding: 4.5rem 0;
+    padding: 4.5rem 0 0 0;
   }
 }
 @media (max-width: 425px) {
   .main__credence {
-    padding: 4rem 0;
+    padding: 4rem 0 0 0;
   }
 }
 .main__questions {
-  padding-top: 7.25rem;
+  padding: 7.25rem 0;
 }
 @media (max-width: 768px) {
   .main__questions {
@@ -1656,6 +1656,20 @@ body {
   line-height: 3.5rem;
   margin-bottom: 4rem;
 }
+@media (max-width: 768px) {
+  .questions-section__title {
+    margin-bottom: 4.5rem;
+    font-size: 2rem;
+    line-height: 2.438rem;
+  }
+}
+@media (max-width: 425px) {
+  .questions-section__title {
+    margin-bottom: 4rem;
+    font-size: 1.5rem;
+    line-height: 1.813rem;
+  }
+}
 .questions-section__body {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1668,27 +1682,49 @@ body {
   background-color: #ebe7f3;
   padding: 3.75rem;
 }
+@media (max-width: 768px) {
+  .questions-section__body {
+    border-radius: 1.25rem;
+    padding: 4.5rem 1.99rem 4.5rem 1.87rem;
+  }
+}
+@media (max-width: 425px) {
+  .questions-section__body {
+    padding: 2rem 1rem 2rem 1.1rem;
+  }
+}
 .questions-section__accordion {
   min-width: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 2rem;
   margin-bottom: 3.75rem;
 }
-.accordion-items__item {
-  border-bottom: solid 0.125rem transparent;
+@media (max-width: 768px) {
+  .questions-section__accordion {
+    gap: 1.75rem;
+    margin-bottom: 3.5rem;
+  }
 }
-.accordion-items__item_show {
-  border-bottom: solid 0.125rem #4d1299;
+@media (max-width: 425px) {
+  .questions-section__accordion {
+    gap: 1.25rem;
+    margin-bottom: 3rem;
+  }
 }
-.accordion-items__item_show .accordion-items__button {
-  border-bottom: solid 0.125rem transparent;
+@media (max-width: 768px) {
+  .questions-section__button {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
 }
-.accordion-items__item_show .accordion-items__content {
-  padding-bottom: 2rem;
+
+.accordion-items__item_show .accordion-items__button span::before, .accordion-items__item._slidedown .accordion-items__button span::before {
+  width: 0;
 }
-.accordion-items__item_show .accordion-items__button span::after {
+.accordion-items__item_show .accordion-items__button span::after, .accordion-items__item._slidedown .accordion-items__button span::after {
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
           transform: rotate(0deg);
@@ -1700,12 +1736,26 @@ body {
   font-family: Montserrat;
   font-size: 1.5rem;
   line-height: 1.813rem;
+  text-align: left;
   width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 2rem 0;
-  border-bottom: solid 0.125rem #4d1299;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 768px) {
+  .accordion-items__button {
+    font-size: 1.375rem;
+    line-height: 1.688rem;
+  }
+}
+@media (max-width: 425px) {
+  .accordion-items__button {
+    font-size: 1.25rem;
+    line-height: 1.437rem;
+  }
 }
 .accordion-items__button span {
   -webkit-box-flex: 0;
@@ -1723,6 +1773,18 @@ body {
   border-radius: 50%;
   position: relative;
 }
+@media (max-width: 768px) {
+  .accordion-items__button span {
+    width: 1.45475rem;
+    height: 1.45475rem;
+  }
+}
+@media (max-width: 425px) {
+  .accordion-items__button span {
+    width: 1.23925rem;
+    height: 1.23925rem;
+  }
+}
 .accordion-items__button span::before, .accordion-items__button span::after {
   content: "";
   width: 0.9125rem;
@@ -1733,18 +1795,47 @@ body {
   -webkit-transition: all ease 0.3s;
   transition: all ease 0.3s;
 }
+@media (max-width: 768px) {
+  .accordion-items__button span::before, .accordion-items__button span::after {
+    width: 0.84875rem;
+  }
+}
+@media (max-width: 425px) {
+  .accordion-items__button span::before, .accordion-items__button span::after {
+    width: 0.72375rem;
+  }
+}
 .accordion-items__button span::after {
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
+}
+.accordion-items__border {
+  width: 100%;
+  height: 0.125rem;
+  background-color: #4d1299;
 }
 .accordion-items__content {
   font-size: 1.125rem;
   line-height: 1.375rem;
   max-width: 36.5625rem;
 }
+@media (max-width: 768px) {
+  .accordion-items__content {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+}
+.accordion-items__content p:first-child {
+  padding-top: 1.5rem;
+}
 .accordion-items__content p:not(:last-child) {
   margin-bottom: 0.75rem;
+}
+@media (max-width: 768px) {
+  .accordion-items__content p:not(:last-child) {
+    margin-bottom: 1rem;
+  }
 }
 
 .footer__rights {

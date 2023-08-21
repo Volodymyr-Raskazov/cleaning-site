@@ -24,36 +24,35 @@ class ItcAccordion {
 		});
 	}
 	show(el) {
-		// const elButton = el.querySelector('.accordion-items__button');
 		const elBody = el.querySelector('.accordion-items__content');
-		if (elBody.classList.contains('collapsing') || el.classList.contains('accordion-items__item_show')) {
+		if (elBody.classList.contains('_collapsing') || el.classList.contains('accordion-items__item_show')) {
 			return;
 		}
 		elBody.style.display = 'block';
 		const height = elBody.offsetHeight;
 		elBody.style.height = 0;
 		elBody.style.overflow = 'hidden';
-		// elBody.style.borderBottom = 'solid 0.125rem $colorDarkViolet';
 		elBody.style.transition = `height ${this._config.duration}ms ease`;
-		// elButton.style.borderBottom = 'solid 0.125rem transparent';
-		elBody.classList.add('collapsing');
-		el.classList.add('accordion-items__item_slidedown');
+		elBody.classList.add('_collapsing');
+		el.classList.add('_slidedown');
 		elBody.offsetHeight;
 		elBody.style.height = `${height}px`;
+		// elBody.style.paddingTop = '1.5rem';
 		window.setTimeout(() => {
-			elBody.classList.remove('collapsing');
-			el.classList.remove('accordion-items__item_slidedown');
-			elBody.classList.add('collapse');
+			elBody.classList.remove('_collapsing');
+			el.classList.remove('_slidedown');
+			elBody.classList.add('_collapse');
 			el.classList.add('accordion-items__item_show');
 			elBody.style.display = '';
 			elBody.style.height = '';
 			elBody.style.transition = '';
 			elBody.style.overflow = '';
+			// elBody.style.marginBottom = '0';
 		}, this._config.duration);
 	}
 	hide(el) {
 		const elBody = el.querySelector('.accordion-items__content');
-		if (elBody.classList.contains('collapsing') || !el.classList.contains('accordion-items__item_show')) {
+		if (elBody.classList.contains('_collapsing') || !el.classList.contains('accordion-items__item_show')) {
 			return;
 		}
 		elBody.style.height = `${elBody.offsetHeight}px`;
@@ -66,8 +65,8 @@ class ItcAccordion {
 		el.classList.remove('accordion-items__item_show');
 		elBody.classList.add('collapsing');
 		window.setTimeout(() => {
-			elBody.classList.remove('collapsing');
-			elBody.classList.add('collapse');
+			elBody.classList.remove('_collapsing');
+			elBody.classList.add('_collapse');
 			elBody.style.display = '';
 			elBody.style.height = '';
 			elBody.style.transition = '';
