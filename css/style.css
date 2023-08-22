@@ -639,12 +639,22 @@ body {
 }
 
 .promo-section__top {
-  padding: 6.38rem 0;
+  padding: 8.81rem 0 7.25rem 0;
 }
 @media (max-width: 1439px) {
   .promo-section__top {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+}
+@media (max-width: 768px) {
+  .promo-section__top {
+    padding-top: 4.5rem;
+  }
+}
+@media (max-width: 425px) {
+  .promo-section__top {
+    padding-top: 2rem;
   }
 }
 .promo-section__content {

@@ -495,9 +495,15 @@ body {
 // section-promo
 .promo-section {
 	&__top {
-		padding: 6.38rem 0;
+		padding: 8.81rem 0 7.25rem 0;
 		@media (max-width: 1439px) {
 			flex-wrap: wrap;
+		}
+		@media (max-width: 768px) {
+			padding-top: 4.5rem;
+		}
+		@media (max-width: 425px) {
+			padding-top: 2rem;
 		}
 	}
 
