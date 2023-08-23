@@ -196,12 +196,12 @@ body {
 	&__promo {
 	}
 	&__includes {
-		padding: 7.25rem 0 9.25rem 0;
+		padding: 7.25rem 0 3rem 0;
 		@media (max-width: 768px) {
 			padding: 4.5rem 0;
 		}
-		@media (max-width: px) {
-			padding: 4rem 0 3rem 0;
+		@media (max-width: 425px) {
+			padding: 4rem 0 1.87rem 0;
 		}
 	}
 	&__benefits {
@@ -708,18 +708,21 @@ body {
 
 	&__items {
 		gap: 2.5rem;
+		margin-bottom: 9.25rem;
 		@media (max-width: 768px) {
 			gap: 2rem;
+			margin-bottom: 4.5rem;
 		}
 		@media (max-width: 425px) {
 			flex-wrap: wrap;
+			margin-bottom: 3rem;
 			gap: 1.5rem;
 		}
 	}
 
 	&__item {
-		position: relative;
 		flex: 0 1 calc(50% - 1.25rem);
+		flex-direction: column;
 		background-color: $colorLightViolet;
 		border-radius: 1.875rem;
 		padding: 2.5rem;
@@ -730,7 +733,39 @@ body {
 		}
 		@media (max-width: 550px) {
 			flex: 1 1 auto;
-			height: 26.0625rem;
+			min-height: 20rem;
+		}
+	}
+
+	&__switches {
+		padding: 0.37rem;
+		border-radius: 3.125rem;
+		border: 0.125rem solid $colorDarkViolet;
+	}
+
+	&__switch {
+		flex: 0 1 33.3333%;
+		display: flex;
+		padding: 1rem 5rem;
+		justify-content: center;
+		align-items: center;
+		gap: 0.5rem;
+		border-radius: 3.125rem;
+		font-size: 1.25rem;
+		line-height: 1.688rem;
+		@media (max-width: 425px) {
+			font-size: 1rem;
+			line-height: 1.375rem;
+			padding: 1rem 0;
+		}
+		&._active {
+			background-color: $colorDarkViolet;
+		}
+		&._active a {
+			color: $colorWhite;
+		}
+		a {
+			color: $colorBlack;
 		}
 	}
 }
@@ -760,29 +795,22 @@ body {
 	}
 
 	&__text {
+		flex: 1 1 auto;
 		font-size: 1.125rem;
 		line-height: 1.563rem;
 		@media (max-width: 768px) {
 			font-size: 1rem;
 			line-height: 1.375rem;
 		}
-		@media (max-width: 425px) {
-			max-width: 17.5rem;
-		}
 	}
 
 	&__footnote {
-		position: absolute;
-		left: 2.5rem;
-		bottom: 2.5rem;
 		color: rgba(27, 27, 27, 0.6);
 		font-size: 1rem;
 		line-height: 1.375rem;
 		@media (max-width: 768px) {
 			font-size: 0.875rem;
 			line-height: 1.188rem;
-			left: 1.5rem;
-			bottom: 2rem;
 		}
 	}
 }
@@ -1117,14 +1145,16 @@ body {
 		}
 	}
 
-	&__btn {
-		justify-content: center;
-		align-items: center;
-	}
-
 	&__button {
-		display: inline-block;
+		display: block;
+		margin: 0 auto;
 		width: fit-content;
+		font-size: 1.125rem;
+		line-height: 1.563rem;
+		@media (max-width: 768px) {
+			font-size: 1rem;
+			line-height: 1.375rem;
+		}
 	}
 }
 .item-benefits {
