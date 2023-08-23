@@ -244,6 +244,15 @@ body {
 			padding: 4rem 0;
 		}
 	}
+	&__contacts {
+		margin-bottom: 7.25rem;
+		@media (max-width: 768px) {
+			margin-bottom: 4.5rem;
+		}
+		@media (max-width: 425px) {
+			margin-bottom: 4rem;
+		}
+	}
 }
 
 .footer {
@@ -1632,6 +1641,104 @@ body {
 	}
 }
 
+// ===========================
+// section-contacts
+.contacts-section {
+	&__title {
+		font-size: 2.875rem;
+		line-height: 3.5rem;
+		margin-bottom: 4rem;
+		text-align: center;
+		@media (max-width: 768px) {
+			font-size: 2rem;
+			line-height: 2.438rem;
+			margin-bottom: 1.56rem;
+		}
+		@media (max-width: 425px) {
+			font-size: 1.5rem;
+			line-height: 1.813rem;
+			margin-bottom: 3rem;
+		}
+	}
+
+	&__items {
+		justify-content: space-between;
+	}
+
+	&__item {
+		&.item-left {
+			padding-top: 3.87rem;
+			margin-left: 6.25rem;
+		}
+		@media (max-width: 768px) {
+			padding-top: 2.31rem;
+			margin-left: 0;
+		}
+		@media (max-width: 425px) {
+			padding-top: 0;
+		}
+	}
+}
+
+.item-left {
+	&__title {
+		font-family: $titleFont;
+		font-size: 1.375rem;
+		line-height: 1.688rem;
+		margin-bottom: 1rem;
+	}
+
+	&__location {
+		font-size: 1.125rem;
+		line-height: 1.563rem;
+		margin-bottom: 2rem;
+	}
+
+	&__phone {
+		border: 0.125rem solid $colorDarkViolet;
+		margin-bottom: 0.81rem;
+	}
+
+	&__social {
+		gap: 1rem;
+		a {
+			width: 2.5rem;
+			height: 2.5rem;
+			border-radius: 50%;
+			background-color: $colorViolet;
+			&:hover {
+				background-color: $colorDarkViolet;
+			}
+			svg {
+				width: 100%;
+				height: 100%;
+				object-fit: fill;
+				fill: $colorDarkViolet;
+				&:hover {
+					fill: $colorWhite;
+				}
+			}
+		}
+	}
+}
+
+.item-right {
+	&__title {
+	}
+
+	&__list {
+	}
+
+	&__social {
+	}
+
+	&__text {
+	}
+}
+
+// ===========================
+// ===========================
+// ===========================
 // ===========================
 
 //====================	 Footer ====================
