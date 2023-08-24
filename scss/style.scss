@@ -428,11 +428,15 @@ body {
 		font-weight: 600;
 		line-height: 1.25rem;
 		border-radius: 1.5625rem;
+		&:hover {
+			color: $colorLightViolet;
+			background-color: $colorDarkViolet;
+		}
 	}
 	&__home,
 	&__office {
 		&._active {
-			color: $colorWhite;
+			color: $colorLightViolet;
 			background: $colorDarkViolet;
 		}
 	}
@@ -759,6 +763,7 @@ body {
 		padding: 0.37rem;
 		border-radius: 3.125rem;
 		border: 0.125rem solid $colorDarkViolet;
+		gap: 0.37rem;
 	}
 
 	&__switch {
@@ -771,6 +776,11 @@ body {
 		border-radius: 3.125rem;
 		font-size: 1.25rem;
 		line-height: 1.688rem;
+		color: $colorBlack;
+		&:hover {
+			color: $colorLightViolet;
+			background-color: $colorDarkViolet;
+		}
 		@media (max-width: 425px) {
 			font-size: 1rem;
 			line-height: 1.375rem;
@@ -783,7 +793,7 @@ body {
 			color: $colorWhite;
 		}
 		a {
-			color: $colorBlack;
+			color: inherit;
 		}
 	}
 }

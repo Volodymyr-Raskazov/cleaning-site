@@ -592,8 +592,12 @@ body {
   line-height: 1.25rem;
   border-radius: 1.5625rem;
 }
+.switch-pages a:hover {
+  color: #f4f4f8;
+  background-color: #4d1299;
+}
 .switch-pages__home._active, .switch-pages__office._active {
-  color: #ffffff;
+  color: #f4f4f8;
   background: #4d1299;
 }
 
@@ -984,6 +988,7 @@ body {
   padding: 0.37rem;
   border-radius: 3.125rem;
   border: 0.125rem solid #4d1299;
+  gap: 0.37rem;
 }
 .includes-section__switch {
   -webkit-box-flex: 0;
@@ -1003,6 +1008,11 @@ body {
   border-radius: 3.125rem;
   font-size: 1.25rem;
   line-height: 1.688rem;
+  color: #1b1b1b;
+}
+.includes-section__switch:hover {
+  color: #f4f4f8;
+  background-color: #4d1299;
 }
 @media (max-width: 425px) {
   .includes-section__switch {
@@ -1018,7 +1028,7 @@ body {
   color: #ffffff;
 }
 .includes-section__switch a {
-  color: #1b1b1b;
+  color: inherit;
 }
 
 .item-includes__title {
