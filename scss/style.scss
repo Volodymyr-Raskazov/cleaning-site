@@ -1672,6 +1672,7 @@ body {
 
 	&__items {
 		justify-content: space-between;
+		gap: 2.25rem;
 		@media (max-width: 425px) {
 			flex-wrap: wrap;
 		}
@@ -1850,27 +1851,145 @@ body {
 // order-section
 .order-section {
 	&__body {
+		position: relative;
+		flex-direction: column;
+		align-items: center;
+		background-color: $colorDarkViolet;
+		border-radius: 1.875rem;
+		padding: 3.75rem 1rem;
+		@media (max-width: 425px) {
+			padding: 2rem 1rem;
+		}
+	}
+
+	&__girl-img,
+	&__boy-img {
+		position: absolute;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
 	}
 
 	&__girl-img {
+		background-image: url(../img/section-order/girl.png);
+		top: 0;
+		left: 0;
+		width: 21.625rem;
+		@media (max-width: 1024px) {
+			height: 65.217%;
+			width: 14.125rem;
+		}
+		@media (max-width: 750px) {
+			display: none;
+		}
 	}
 
 	&__boy-img {
+		background-image: url(../img/section-order/boy.png);
+		bottom: 0;
+		right: 0;
+		width: 20.8125rem;
+		@media (max-width: 1024px) {
+			background-image: url(../img/section-order/boy-768.png);
+			bottom: 1.25rem;
+			height: 65.217%;
+			width: 7.875rem;
+		}
+		@media (max-width: 750px) {
+			background-image: url(../img/section-order/bin.png);
+			width: 3.95531rem;
+			// height: 65.217%;
+			right: 1rem;
+			bottom: 25%;
+			transform: rotate(19.115deg);
+		}
 	}
 
 	&__text {
+		color: $colorLightViolet;
+		text-align: center;
+		font-family: $titleFont;
+		font-size: 2rem;
+		line-height: 115%;
+		max-width: 46.0625rem;
+		margin-bottom: 2.25rem;
+		@media (max-width: 878px) {
+			font-size: 1.75rem;
+			max-width: 31.875rem;
+			margin-bottom: 3.5rem;
+		}
+		@media (max-width: 750px) {
+			font-size: 1.25rem;
+			margin-bottom: 3rem;
+		}
+		span {
+			background-color: #ff8427;
+			border-radius: 1.15rem;
+			padding: 0 0.5rem;
+			@media (max-width: 878px) {
+				&:nth-child(1) {
+					border-radius: 0.875rem 0 0 0.875rem;
+					margin-right: -0.25rem;
+				}
+				&:nth-child(2) {
+					border-radius: 0 0.875rem 0.875rem 0;
+					margin-left: -0.25rem;
+				}
+			}
+		}
 	}
 
 	&__content {
+		flex-direction: column;
+		align-items: center;
+		max-width: 24.4375rem;
 	}
 
 	&__price {
+		color: $colorViolet;
+		font-size: 3.125rem;
+		font-weight: 700;
+		line-height: 115%;
+		@media (max-width: 878px) {
+			font-size: 2.25rem;
+			margin-bottom: 0.5rem;
+		}
+		@media (max-width: 750px) {
+			font-size: 2.25rem;
+		}
 	}
 
 	&__terms {
+		text-align: center;
+		color: rgba(235, 231, 243, 0.8);
+		font-size: 1.125rem;
+		line-height: 1.563rem;
+		margin-bottom: 2.25rem;
+		@media (max-width: 878px) {
+			font-size: 1rem;
+			line-height: 1.375rem;
+			margin-bottom: 2rem;
+		}
 	}
 
 	&__btn {
+		width: 100%;
+		background-color: $colorLightViolet;
+		border-radius: 3.125rem;
+		padding: 1.12rem 0;
+		font-size: 1.125rem;
+		font-weight: 600;
+		line-height: 1.563rem;
+		color: $colorDarkViolet;
+		&:hover {
+			background-color: $colorViolet;
+		}
+		@media (max-width: 878px) {
+			font-size: 1rem;
+			line-height: 1.375rem;
+			padding: 1rem 0;
+		}
 	}
 }
 
