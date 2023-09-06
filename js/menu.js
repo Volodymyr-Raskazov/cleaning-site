@@ -1,5 +1,3 @@
-"use strict"
-
 const menu = document.getElementById('menu');
 const menuBtn = document.getElementById('menu-btn');
 

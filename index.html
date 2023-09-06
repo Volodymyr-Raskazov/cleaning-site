@@ -6,9 +6,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/responsiv.css">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic&display=swap&subset=cyrillic-ext" rel="stylesheet" />
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic&display=swap&subset=cyrillic-ext" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic&display=swap&subset=cyrillic-ext&_v=20230906153211" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic&display=swap&subset=cyrillic-ext&_v=20230906153211" rel="stylesheet" />
 	<title>Comfort Group</title>
 	<link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
 </head>
@@ -239,7 +238,6 @@
 				</nav>
 			</div>
 		</header>
-
 		<main class="main">
 			<section class="main__promo promo-section bg-light-violet">
 				<div class="promo-section__container">
@@ -252,8 +250,14 @@
 							</button>
 						</div>
 						<div class="promo-section__background bg ibg">
-							<img src="img/rectangle.png" alt="rectangle">
-							<div class="promo-section__img ibg"><img src="img/section-promo/promo.png" alt="Promo img"></div>
+							<picture>
+								<source srcset="img/rectangle.webp" type="image/webp"><img src="img/rectangle.png" alt="rectangle">
+							</picture>
+							<div class="promo-section__img ibg">
+								<picture>
+									<source srcset="img/section-promo/promo.webp" type="image/webp"><img src="img/section-promo/promo.png" alt="Promo img">
+								</picture>
+							</div>
 						</div>
 					</div>
 					<div class="promo-section__items flex">
@@ -308,16 +312,101 @@
 						</div>
 					</div>
 
-					<div class="includes-section__switches flex">
-						<button class="includes-section__switch semi-bold _active">
-							<a href="#">Кухня</a>
-						</button>
-						<button class="includes-section__switch semi-bold">
-							<a href="#">Кімнати</a>
-						</button>
-						<button class="includes-section__switch semi-bold">
-							<a href="#">Санвузол</a>
-						</button>
+					<div class="includes-section__slider slider-block">
+						<div class="slider-block__switches flex">
+							<button onclick="currentSlide(1)" data-id="kitchen" class="slider-block__switch semi-bold">Кухня</button>
+							<button onclick="currentSlide(2)" data-id="rooms" class="slider-block__switch semi-bold _active">Кімнати</button>
+							<button onclick="currentSlide(3)" data-id="bathroom" class="slider-block__switch semi-bold">Санвузол</button>
+						</div>
+						<div class="slider-block__slides slide-items flex">
+							<div data-id="kitchen" class="slide-items__item slide-items__item_kitchen ibg fade">
+								<picture>
+									<source srcset="img/section-includes/kitchen.webp" type="image/webp"><img src="img/section-includes/kitchen.jpg" alt="kitchen">
+								</picture>
+								<div class="slide-items__tooltip tooltip-item tooltip-1 flex">
+									<div class="tooltip-item__icon flex"></div>
+									<div class="tooltip-item__label">Миємо підлогу</div>
+								</div>
+								<div class="slide-items__tooltip tooltip-item tooltip-2 flex">
+									<div class="tooltip-item__icon flex"></div>
+									<div class="tooltip-item__label">Протираємо плитку </div>
+								</div>
+								<div class="slide-items__tooltip tooltip-item tooltip-3 flex">
+									<div class="tooltip-item__icon flex"></div>
+									<div class="tooltip-item__label">Миємо раковину та плиту</div>
+								</div>
+								<div class="slide-items__tooltip tooltip-item tooltip-4 flex">
+									<div class="tooltip-item__icon flex"></div>
+									<div class="tooltip-item__label">Миємо техніку</div>
+								</div>
+								<div class="slide-items__tooltip tooltip-item tooltip-5 flex">
+									<div class="tooltip-item__icon flex"></div>
+									<div class="tooltip-item__label">Протираємо підвіконня, батареї, плінтуси, двері та вимикачі!</div>
+								</div>
+							</div>
+							<div data-id="rooms" class="slide-items__item slide-items__item_rooms ibg fade _active">
+								<picture>
+									<source srcset="img/section-includes/rooms.webp" type="image/webp"><img src="img/section-includes/rooms.jpg" alt="rooms">
+								</picture>
+								<div class="slide-items__tooltip tooltip-item tooltip-1 flex">
+									<div class="tooltip-item__icon flex"></div>
+									<div class="tooltip-item__label">Прибираємо та <br> виносимо сміття</div>
+								</div>
+								<div class="slide-items__tooltip tooltip-item tooltip-2 flex">
+									<div class="tooltip-item__icon flex"></div>
+									<div class="tooltip-item__label">Пилососимо та <br> миємо підлогу</div>
+								</div>
+								<div class="slide-items__tooltip tooltip-item tooltip-3 flex">
+									<div class="tooltip-item__icon flex"></div>
+									<div class="tooltip-item__label">Витираємо пил з усих відкритих <br> та закритих поверхонь</div>
+								</div>
+								<div class="slide-items__tooltip tooltip-item tooltip-4 flex">
+									<div class="tooltip-item__icon flex"></div>
+									<div class="tooltip-item__label">Хімчистка диванів, матраців, <br> подушок, крісел та стільчиків</div>
+								</div>
+								<div class="slide-items__tooltip tooltip-item tooltip-5 flex">
+									<div class="tooltip-item__icon flex"></div>
+									<div class="tooltip-item__label">Розставляємо взуття <br> та складаємо ваші речі</div>
+								</div>
+								<div class="slide-items__tooltip tooltip-item tooltip-6 flex">
+									<div class="tooltip-item__icon flex"></div>
+									<div class="tooltip-item__label">Миємо вікна, підвіконня, <br> батареї, плінтуси, вимикачі, <br> ручки, двері, люстри</div>
+								</div>
+								<div class="slide-items__tooltip tooltip-item tooltip-7 flex">
+									<div class="tooltip-item__icon flex"></div>
+									<div class="tooltip-item__label">Заправляємо ліжка та <br> змінюємо постільну білизну</div>
+								</div>
+							</div>
+							<div data-id="bathroom" class="slide-items__item slide-items__item_bathroom ibg fade">
+								<picture>
+									<source srcset="img/section-includes/bathroom.webp" type="image/webp"><img src="img/section-includes/bathroom.jpg" alt="bathroom">
+								</picture>
+								<div class="slide-items__tooltip tooltip-item tooltip-1 flex">
+									<div class="tooltip-item__icon flex"></div>
+									<div class="tooltip-item__label">Миємо підлогу та <br> плінтуси, пилососимо</div>
+								</div>
+								<div class="slide-items__tooltip tooltip-item tooltip-2 flex">
+									<div class="tooltip-item__icon flex"></div>
+									<div class="tooltip-item__label">Миємо та дезінфікуємо унітаз</div>
+								</div>
+								<div class="slide-items__tooltip tooltip-item tooltip-3 flex">
+									<div class="tooltip-item__icon flex"></div>
+									<div class="tooltip-item__label">Протираємо всі поверхні</div>
+								</div>
+								<div class="slide-items__tooltip tooltip-item tooltip-4 flex">
+									<div class="tooltip-item__icon flex"></div>
+									<div class="tooltip-item__label">Миємо ванну, крани та <br> душову кабінку</div>
+								</div>
+								<div class="slide-items__tooltip tooltip-item tooltip-5 flex">
+									<div class="tooltip-item__icon flex"></div>
+									<div class="tooltip-item__label">Чистимо дзеркала</div>
+								</div>
+								<div class="slide-items__tooltip tooltip-item tooltip-6 flex">
+									<div class="tooltip-item__icon flex"></div>
+									<div class="tooltip-item__label">Миємо раковину</div>
+								</div>
+							</div>
+						</div>
 					</div>
 
 				</div>
@@ -365,8 +454,14 @@
 				<div class="benefits-section__container">
 					<div class="benefits-section__top flex">
 						<div class="benefits-section__background bg ibg">
-							<img src="img/rectangle.png" alt="rectangle">
-							<div class="benefits-section__img ibg"><img src="img/section-benefits/benefits.png" alt="Promo img"></div>
+							<picture>
+								<source srcset="img/rectangle.webp" type="image/webp"><img src="img/rectangle.png" alt="rectangle">
+							</picture>
+							<div class="benefits-section__img ibg">
+								<picture>
+									<source srcset="img/section-benefits/benefits.webp" type="image/webp"><img src="img/section-benefits/benefits.png" alt="Promo img">
+								</picture>
+							</div>
 						</div>
 						<div class="benefits-section__content">
 							<h1 class="benefits-section__title title semi-bold">Comfort Group допоможе вам організувати та підтримувати чистоту у вашому будинку</span></h1>
@@ -381,21 +476,27 @@
 					<div class="benefits-section__items flex">
 						<div class="benefits-section__item item-benefits flex">
 							<div class="item-benefits__img ibg">
-								<img src="img/vacuum.png" alt="vacuum">
+								<picture>
+									<source srcset="img/vacuum.webp" type="image/webp"><img src="img/vacuum.png" alt="vacuum">
+								</picture>
 							</div>
 							<h3 class="item-benefits__title semi-bold">Техніка KARCHER</h3>
 							<p class="item-benefits__text"><span class="semi-bold">KARCHER</span> — це професійна техніка, що забезпечує ретельне та якісне прибирання. Весь інвентар та техніки наші клінери приносять з собою!</p>
 						</div>
 						<div class="benefits-section__item item-benefits">
 							<div class="item-benefits__img ibg">
-								<img src="img/detergents.png" alt="detergents">
+								<picture>
+									<source srcset="img/detergents.webp" type="image/webp"><img src="img/detergents.png" alt="detergents">
+								</picture>
 							</div>
 							<h3 class="item-benefits__title semi-bold">Гіпоалергенні миючі засоби</h3>
 							<p class="item-benefits__text">У прибиранні ми використовуємо лише якісну та не агресивну хімію <span class="semi-bold">KIEHL</span> та <span class="semi-bold">Pomoc Domowa</span>.</p>
 						</div>
 						<div class="benefits-section__item item-benefits">
 							<div class="item-benefits__img ibg">
-								<img src="img/quality.png" alt="quality">
+								<picture>
+									<source srcset="img/quality.webp" type="image/webp"><img src="img/quality.png" alt="quality">
+								</picture>
 							</div>
 							<h3 class="item-benefits__title semi-bold">Досвідчений персонал</h3>
 							<p class="item-benefits__text">Всі наші клінери спеціально підготовленні та <span class="semi-bold">пройшли навчання</span> від нашої компанії. Ми збираємо відгуки про кожного працівника та <span class="semi-bold">контролюємо їх роботу</span></p>
@@ -504,13 +605,13 @@
 								<h4 class="item-credence__title semi-bold">02</h4>
 								<h6 class="item-credence__subtitle semi-bold">Стежимо за якістю прибирання</h6>
 								<p class="item-credence__text">Після кожного прибирання ми збираємо у клієнтів чесні відгуки про роботу клінерів. У разі якщо клієнт не задоволенний якістю прибирання ми проводимо повторне прибирання або повністю повертаємо кошти.</p>
-								<!-- <img class="item-credence__img-sponge" src="img/section-credence/sponge.png" alt="sponge"> -->
+								<!-- <picture><source srcset="img/section-credence/sponge.webp" type="image/webp"><img class="item-credence__img-sponge" src="img/section-credence/sponge.png" alt="sponge"></picture> -->
 							</div>
 							<div class="credence-section__item item-credence">
 								<h4 class="item-credence__title semi-bold">03</h4>
 								<h6 class="item-credence__subtitle semi-bold">Професійна техніка та безпечна хімія</h6>
 								<p class="item-credence__text">Техніка бренду <span class="semi-bold">“KARCHER”</span> забезпечує ретельне та якісне прибирання. А миючі засоби німецького бренду <span class="semi-bold">“KIEHL”</span> мають високу очисну здатність і впораються навіть з складними забрудненнями. Вся наша хімія не має різких запахів та гіпоалергенна.</p>
-								<!-- <img class="item-credence__img-brush" src="img/section-credence/brush.png" alt="brush"> -->
+								<!-- <picture><source srcset="img/section-credence/brush.webp" type="image/webp"><img class="item-credence__img-brush" src="img/section-credence/brush.png" alt="brush"></picture> -->
 							</div>
 							<div class="credence-section__item item-credence">
 								<h4 class="item-credence__title semi-bold">04</h4>
@@ -685,7 +786,9 @@
 				<div class="order-section__container">
 					<div class="order-section__body flex">
 						<div class="order-section__girl-img">
-							<!-- <img src="img/section-order/girl.png" alt="girl"> -->
+							<picture>
+								<source srcset="img/section-order/girl.webp" type="image/webp"><img src="img/section-order/girl.png" alt="girl">
+							</picture>
 						</div>
 						<div class="order-section__text semi-bold">Досить витрачати свій вільний час на прибирання! Замовляйте <span>місячну</span> <span>підписку</span> на клінінг вашого дому!</div>
 						<div class="order-section__content flex">
@@ -696,14 +799,15 @@
 							</button>
 						</div>
 						<div class="order-section__boy-img">
-							<!-- <img src="img/section-order/boy.png" alt="boy"> -->
+							<picture>
+								<source srcset="img/section-order/boy.webp" type="image/webp"><img src="img/section-order/boy.png" alt="boy">
+							</picture>
 						</div>
 					</div>
 				</div>
 			</section>
 
 		</main>
-
 		<footer class="footer">
 			<div class="footer__container">
 				<div class="footer__body flex">
@@ -793,7 +897,9 @@
 	</div>
 	<script src="js/menu.js"></script>
 	<script src="js/accordion.js"></script>
+	<script src="js/slider.js"></script>
 	<script src="js/script.js"></script>
+
 </body>
 
 </html>

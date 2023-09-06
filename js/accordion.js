@@ -1,4 +1,4 @@
-class ItcAccordion {
+class accordion {
 	constructor(target, config) {
 		this._el = typeof target === 'string' ? document.querySelector(target) : target;
 		const defaultConfig = {
@@ -37,7 +37,6 @@ class ItcAccordion {
 		el.classList.add('_slidedown');
 		elBody.offsetHeight;
 		elBody.style.height = `${height}px`;
-		// elBody.style.paddingTop = '1.5rem';
 		window.setTimeout(() => {
 			elBody.classList.remove('_collapsing');
 			el.classList.remove('_slidedown');
@@ -47,7 +46,6 @@ class ItcAccordion {
 			elBody.style.height = '';
 			elBody.style.transition = '';
 			elBody.style.overflow = '';
-			// elBody.style.marginBottom = '0';
 		}, this._config.duration);
 	}
 	hide(el) {
@@ -77,7 +75,3 @@ class ItcAccordion {
 		el.classList.contains('accordion-items__item_show') ? this.hide(el) : this.show(el);
 	}
 }
-
-new ItcAccordion('#accordion', {
-	alwaysOpen: false
-});
