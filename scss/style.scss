@@ -649,24 +649,24 @@ body {
 				top: 82.61%;
 				left: 28.01%;
 				@media (max-width: 768px) {
-					top: 81.25%;
-					left: 24.35%;
+					top: 81%;
+					left: 24%;
 				}
 				@media (max-width: 425px) {
-					top: 73.19%;
-					left: 12.65%;
+					top: 71%;
+					left: 21%;
 				}
 			}
 			& .tooltip-2 {
 				top: 46.56%;
 				left: 35.2%;
 				@media (max-width: 768px) {
-					top: 43.15%;
-					left: 31.02%;
+					top: 43%;
+					left: 31%;
 				}
 				@media (max-width: 425px) {
-					top: 36.89%;
-					left: 26.3%;
+					top: 36%;
+					left: 28%;
 				}
 			}
 			& .tooltip-3 {
@@ -677,8 +677,8 @@ body {
 					left: 47.25%;
 				}
 				@media (max-width: 425px) {
-					top: 54.36%;
-					left: 52.25%;
+					top: 55%;
+					left: 51.5%;
 					max-width: 3.75rem !important;
 				}
 			}
@@ -690,8 +690,8 @@ body {
 					left: 65.5%;
 				}
 				@media (max-width: 425px) {
-					top: 29.13%;
-					left: 54.5%;
+					top: 29%;
+					left: 57.5%;
 				}
 			}
 			& .tooltip-5 {
@@ -717,8 +717,8 @@ body {
 					left: 10%;
 				}
 				@media (max-width: 425px) {
-					top: 35%;
-					left: 5%;
+					top: 31%;
+					left: 10%;
 				}
 			}
 			& .tooltip-2 {
@@ -729,7 +729,7 @@ body {
 					left: 24%;
 				}
 				@media (max-width: 425px) {
-					top: 69%;
+					top: 65%;
 					left: 23%;
 				}
 			}
@@ -766,7 +766,7 @@ body {
 				}
 				@media (max-width: 425px) {
 					top: 0.5%;
-					left: 44.5%;
+					left: 40.5%;
 				}
 			}
 			& .tooltip-6 {
@@ -789,7 +789,7 @@ body {
 					left: 70.5%;
 				}
 				@media (max-width: 425px) {
-					top: 51.5%;
+					top: 36.5%;
 					left: 74.5%;
 				}
 			}
@@ -804,8 +804,8 @@ body {
 					left: 7%;
 				}
 				@media (max-width: 425px) {
-					top: 66%;
-					left: 2%;
+					top: 62%;
+					left: 5%;
 				}
 			}
 			& .tooltip-2 {
@@ -828,7 +828,7 @@ body {
 					left: 45%;
 				}
 				@media (max-width: 425px) {
-					top: 72%;
+					top: 70%;
 					left: 45%;
 				}
 			}
@@ -841,7 +841,7 @@ body {
 				}
 				@media (max-width: 425px) {
 					top: 6%;
-					left: 28%;
+					left: 25%;
 				}
 			}
 			& .tooltip-5 {
@@ -929,11 +929,6 @@ body {
 			background-color: $colorLightViolet;
 			position: absolute;
 			transition: all ease 0.3s;
-			// @media (max-width: 425px) {
-			// 	width: 0.46875rem;
-			// 	height: 0.0625rem;
-			// 	border-radius: 0.03125rem;
-			// }
 		}
 		&:hover {
 			~ .tooltip-item__label {
@@ -941,9 +936,6 @@ body {
 			}
 			&::before {
 				width: 0.65625rem;
-				// @media (max-width: 425px) {
-				// 	width: 0.46875rem;
-				// }
 			}
 			&::after {
 				transform: rotate(-90deg);
@@ -954,15 +946,7 @@ body {
 		}
 		&::after {
 			width: 0.65625rem;
-			// @media (max-width: 425px) {
-			// 	width: 0.46875rem;
-			// }
 		}
-		// @media (max-width: 425px) {
-		// 	width: 0.80356rem;
-		// 	height: 0.80356rem;
-		// 	outline: 0.22rem solid rgba(77, 18, 153, 0.3);
-		// }
 	}
 }
 

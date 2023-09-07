@@ -772,14 +772,14 @@ body {
 }
 @media (max-width: 768px) {
   .slide-items__item_kitchen .tooltip-1 {
-    top: 81.25%;
-    left: 24.35%;
+    top: 81%;
+    left: 24%;
   }
 }
 @media (max-width: 425px) {
   .slide-items__item_kitchen .tooltip-1 {
-    top: 73.19%;
-    left: 12.65%;
+    top: 71%;
+    left: 21%;
   }
 }
 .slide-items__item_kitchen .tooltip-2 {
@@ -788,14 +788,14 @@ body {
 }
 @media (max-width: 768px) {
   .slide-items__item_kitchen .tooltip-2 {
-    top: 43.15%;
-    left: 31.02%;
+    top: 43%;
+    left: 31%;
   }
 }
 @media (max-width: 425px) {
   .slide-items__item_kitchen .tooltip-2 {
-    top: 36.89%;
-    left: 26.3%;
+    top: 36%;
+    left: 28%;
   }
 }
 .slide-items__item_kitchen .tooltip-3 {
@@ -810,8 +810,8 @@ body {
 }
 @media (max-width: 425px) {
   .slide-items__item_kitchen .tooltip-3 {
-    top: 54.36%;
-    left: 52.25%;
+    top: 55%;
+    left: 51.5%;
     max-width: 3.75rem !important;
   }
 }
@@ -827,8 +827,8 @@ body {
 }
 @media (max-width: 425px) {
   .slide-items__item_kitchen .tooltip-4 {
-    top: 29.13%;
-    left: 54.5%;
+    top: 29%;
+    left: 57.5%;
   }
 }
 .slide-items__item_kitchen .tooltip-5 {
@@ -859,8 +859,8 @@ body {
 }
 @media (max-width: 425px) {
   .slide-items__item_rooms .tooltip-1 {
-    top: 35%;
-    left: 5%;
+    top: 31%;
+    left: 10%;
   }
 }
 .slide-items__item_rooms .tooltip-2 {
@@ -875,7 +875,7 @@ body {
 }
 @media (max-width: 425px) {
   .slide-items__item_rooms .tooltip-2 {
-    top: 69%;
+    top: 65%;
     left: 23%;
   }
 }
@@ -924,7 +924,7 @@ body {
 @media (max-width: 425px) {
   .slide-items__item_rooms .tooltip-5 {
     top: 0.5%;
-    left: 44.5%;
+    left: 40.5%;
   }
 }
 .slide-items__item_rooms .tooltip-6 {
@@ -955,7 +955,7 @@ body {
 }
 @media (max-width: 425px) {
   .slide-items__item_rooms .tooltip-7 {
-    top: 51.5%;
+    top: 36.5%;
     left: 74.5%;
   }
 }
@@ -971,8 +971,8 @@ body {
 }
 @media (max-width: 425px) {
   .slide-items__item_bathroom .tooltip-1 {
-    top: 66%;
-    left: 2%;
+    top: 62%;
+    left: 5%;
   }
 }
 .slide-items__item_bathroom .tooltip-2 {
@@ -1003,7 +1003,7 @@ body {
 }
 @media (max-width: 425px) {
   .slide-items__item_bathroom .tooltip-3 {
-    top: 72%;
+    top: 70%;
     left: 45%;
   }
 }
@@ -1020,7 +1020,7 @@ body {
 @media (max-width: 425px) {
   .slide-items__item_bathroom .tooltip-4 {
     top: 6%;
-    left: 28%;
+    left: 25%;
   }
 }
 .slide-items__item_bathroom .tooltip-5 {
