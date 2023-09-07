@@ -1596,7 +1596,6 @@ body {
 }
 .accordion-items__button:hover {
   color: #4d1299;
-  text-decoration: underline;
 }
 .accordion-items__button span {
   -webkit-box-flex: 0;
