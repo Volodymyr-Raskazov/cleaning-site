@@ -19,13 +19,16 @@ $colorDarkViolet: #4d1299;
 body {
 	color: $colorBlack;
 	font-family: $textFont, Arial, Helvetica, sans-serif;
-	overflow-x: hidden;
-	overflow-y: auto;
+
+	// overflow-x: hidden;
+	// overflow-y: auto;
 }
 
 .wrapper {
 	min-height: 100%;
 	flex-direction: column;
+	position: relative;
+	overflow: hidden;
 }
 
 [class*="__container"] {
