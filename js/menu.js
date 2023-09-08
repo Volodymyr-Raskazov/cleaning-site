@@ -2,6 +2,10 @@ const menu = document.getElementById('menu');
 const menuBtn = document.getElementById('menu-btn');
 
 menuBtn.addEventListener('click', () => {
-	menu.classList.toggle('_active');
-	menuBtn.classList.toggle('_active');
+	toggleActiveClass(menu);
+	toggleActiveClass(menuBtn);
 });
+
+function toggleActiveClass(element) {
+	element.classList.toggle('active');
+}
