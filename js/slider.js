@@ -23,10 +23,10 @@ $('.slider-block__switch').on('click', function (e) {
 	$('.slider-block__switch.active').removeClass('active');
 	let id = $(this).data('id');
 
-	$('.slide-items__item.active').fadeOut(300, function () {
+	$('.slide-items__item.active').fadeOut(100, function () {
 		$(this).removeClass('active');
 
-		$(`.slide-items__item[data-id="${id}"]`).fadeIn(300, function () {
+		$(`.slide-items__item[data-id="${id}"]`).fadeIn(200, function () {
 			$(this).addClass('active');
 		});
 	});

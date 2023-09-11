@@ -108,6 +108,12 @@ body {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
 
+body.active {
+  position: fixed;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
 .wrapper {
   min-height: 100%;
   -webkit-box-orient: vertical;
@@ -286,6 +292,8 @@ body {
   width: 45%;
   padding-top: 10.44rem;
   padding-left: 5rem;
+  padding-right: 0.9375rem;
+  padding-bottom: 1.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -300,6 +308,7 @@ body {
 }
 
 .header__menu.active {
+  height: 100vh;
   right: 0;
   opacity: 1;
 }
@@ -1883,14 +1892,6 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 1rem;
-}
-
-@media (min-width: 425px) {
-  body.active {
-    position: fixed;
-    height: 100vh;
-    overflow-y: hidden;
-  }
 }
 
 @media (min-width: 2500px) {
