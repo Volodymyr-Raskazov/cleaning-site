@@ -293,6 +293,7 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  overflow: scroll;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   opacity: 0;
@@ -1882,6 +1883,14 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 1rem;
+}
+
+@media (min-width: 425px) {
+  body.active {
+    position: fixed;
+    height: 100vh;
+    overflow-y: hidden;
+  }
 }
 
 @media (min-width: 2500px) {

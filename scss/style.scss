@@ -19,9 +19,13 @@ $colorDarkViolet: #4d1299;
 body {
 	color: $colorBlack;
 	font-family: $textFont, Arial, Helvetica, sans-serif;
-
-	// overflow-x: hidden;
-	// overflow-y: auto;
+	&.active {
+		@media (min-width: 425px) {
+			position: fixed;
+			height: 100vh;
+			overflow-y: hidden;
+		}
+	}
 }
 
 .wrapper {
@@ -163,6 +167,7 @@ body {
 		padding-left: 5rem;
 		display: flex;
 		flex-direction: column;
+		overflow: scroll;
 		transition: all 0.3s ease-in-out;
 		opacity: 0;
 		&.active {
