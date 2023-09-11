@@ -14,12 +14,12 @@ function isWebp() {
 	});
 }
 
-new accordion('#accordion', {
-	alwaysOpen: false
-});
+// new accordion('#accordion', {
+// 	alwaysOpen: false
+// });
 
-function currentSlide(n) {
-	showSlides(slideIndex = n);
-}
+// function currentSlide(n) {
+// 	showSlides(slideIndex = n);
+// }
 
 isWebp();

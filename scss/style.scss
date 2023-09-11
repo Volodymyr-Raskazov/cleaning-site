@@ -1363,26 +1363,12 @@ body {
 	&__accordion {
 		min-width: 100%;
 		flex-direction: column;
-		gap: 2rem;
+		// gap: 2rem;
 		margin-bottom: 3.75rem;
 	}
 }
 
 .accordion-items {
-	&__item {
-		&_show .accordion-items__button span::before,
-		&._slidedown .accordion-items__button span::before {
-			width: 0;
-		}
-		&_show .accordion-items__button span::after,
-		&._slidedown .accordion-items__button span::after {
-			transform: rotate(0deg);
-		}
-		&:not(.accordion-items__item_show) .accordion-items__content {
-			display: none;
-		}
-	}
-
 	&__button {
 		font-family: $titleFont;
 		font-size: 1.5rem;
@@ -1391,6 +1377,7 @@ body {
 		width: 100%;
 		justify-content: space-between;
 		align-items: center;
+		padding: 2rem 0;
 		&:hover {
 			color: $colorDarkViolet;
 		}
@@ -1416,6 +1403,14 @@ body {
 			&::after {
 				transform: rotate(-90deg);
 			}
+			&.active {
+				&::before {
+					width: 0;
+				}
+				&::after {
+					transform: rotate(0deg);
+				}
+			}
 		}
 	}
 
@@ -1429,9 +1424,9 @@ body {
 		font-size: 1.125rem;
 		line-height: 1.375rem;
 		max-width: 36.5625rem;
-		p:first-child {
-			padding-top: 1.5rem;
-		}
+		margin-top: -0.5rem;
+		margin-bottom: 2rem;
+		display: none;
 		p:not(:last-child) {
 			margin-bottom: 0.75rem;
 		}

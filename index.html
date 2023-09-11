@@ -314,12 +314,12 @@
 
 					<div class="includes-section__slider slider-block">
 						<div class="slider-block__switches flex">
-							<button onclick="currentSlide(1)" data-id="kitchen" class="slider-block__switch semi-bold active">Кухня</button>
-							<button onclick="currentSlide(2)" data-id="rooms" class="slider-block__switch semi-bold">Кімнати</button>
-							<button onclick="currentSlide(3)" data-id="bathroom" class="slider-block__switch semi-bold">Санвузол</button>
+							<button data-id="1" class="slider-block__switch semi-bold active">Кухня</button>
+							<button data-id="2" class="slider-block__switch semi-bold">Кімнати</button>
+							<button data-id="3" class="slider-block__switch semi-bold">Санвузол</button>
 						</div>
 						<div class="slider-block__slides slide-items flex">
-							<div data-id="kitchen" class="slide-items__item slide-items__item_kitchen ibg fade active">
+							<div data-id="1" class="slide-items__item slide-items__item_kitchen ibg active">
 								<picture>
 									<source srcset="img/section-includes/kitchen.webp" type="image/webp"><img src="img/section-includes/kitchen.jpg" alt="kitchen">
 								</picture>
@@ -344,7 +344,7 @@
 									<div class="tooltip-item__label">Протираємо підвіконня, батареї, плінтуси, двері та вимикачі!</div>
 								</div>
 							</div>
-							<div data-id="rooms" class="slide-items__item slide-items__item_rooms ibg fade">
+							<div data-id="2" class="slide-items__item slide-items__item_rooms ibg">
 								<picture>
 									<source srcset="img/section-includes/rooms.webp" type="image/webp"><img src="img/section-includes/rooms.jpg" alt="rooms">
 								</picture>
@@ -377,7 +377,7 @@
 									<div class="tooltip-item__label">Заправляємо ліжка та <br> змінюємо постільну білизну</div>
 								</div>
 							</div>
-							<div data-id="bathroom" class="slide-items__item slide-items__item_bathroom ibg fade">
+							<div data-id="3" class="slide-items__item slide-items__item_bathroom ibg">
 								<picture>
 									<source srcset="img/section-includes/bathroom.webp" type="image/webp"><img src="img/section-includes/bathroom.jpg" alt="bathroom">
 								</picture>
@@ -633,9 +633,9 @@
 
 					<div class="questions-section__body flex">
 
-						<div class="questions-section__accordion accordion-items flex" id="accordion">
+						<div id="accordion" class="questions-section__accordion accordion-items flex">
 
-							<div class="accordion-items__item accordion-items__item_show">
+							<div class="accordion-items__item">
 								<button class="accordion-items__button semi-bold flex">Скільки коштує клінінг?<span class="flex"></span></button>
 								<div class="accordion-items__content">
 									<p>Для будинків та квартир у нас діє акційна місячна підписка вартістю <span class="semi-bold">399zł</span>.<br>В підписку входить 1 генеральне прибирання та 1 підтримуюче.</p>
@@ -895,6 +895,7 @@
 			</div>
 		</footer>
 	</div>
+	<script src="js/jQuery.min.js"></script>
 	<script src="js/menu.js"></script>
 	<script src="js/accordion.js"></script>
 	<script src="js/slider.js"></script>
